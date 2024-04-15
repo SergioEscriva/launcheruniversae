@@ -10,28 +10,12 @@ package launcher;
  */
 public class principal extends javax.swing.JFrame {
 
-    //VistaGame1 vistaGame1 = new VistaGame1();
-    // Utility utilidades = new Utility();
     /**
      * Creates new form principal
      */
     public principal() {
         initComponents();
-        this.setLocationRelativeTo(this);
 
-        //utilidades.SetImageLabel(jLabel1, "src/imagenes/interfazGame/fondoImagen.png");
-        rsscalelabel.RSScaleLabel.setScaleLabel(jLabel1, "./imagenes/fondoImagen.png");
-
-        this.repaint();
-
-        /*
-        //vistaGame1 p1 = new vistaGame1();
-        cuerpoGame.setSize(1540, 850);
-        cuerpoGame.removeAll();
-        cuerpoGame.add(vistaGame1, BorderLayout.CENTER);
-        cuerpoGame.revalidate();
-        cuerpoGame.repaint();
-         */
     }
 
     /**
@@ -120,8 +104,6 @@ public class principal extends javax.swing.JFrame {
 
             public void run() {
                 new principal().setVisible(true);
-                //VistaGame1 vistaGame = new VistaGame1();
-                //vistaGame.setVisible(true);
 
             }
 

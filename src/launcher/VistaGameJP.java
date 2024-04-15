@@ -19,7 +19,7 @@ public class VistaGameJP extends javax.swing.JFrame {
      */
     public VistaGameJP() {
         initComponents();
-        this.setLocationRelativeTo(this);
+        //this.setLocationRelativeTo(this);
         utilidades.SetImageLabel(ImagenFondo, "src/imagenes/interfazGame/fondoImagen.png");
         utilidades.SetImageLabel(imagenPrincipal, "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png");
         this.repaint();
@@ -44,23 +44,25 @@ public class VistaGameJP extends javax.swing.JFrame {
         setBackground(new java.awt.Color(14, 77, 144));
 
         cuerpoGame.setBackground(new java.awt.Color(14, 77, 144));
+        cuerpoGame.setMaximumSize(new java.awt.Dimension(720, 450));
         cuerpoGame.setMinimumSize(new java.awt.Dimension(1540, 850));
         cuerpoGame.setPreferredSize(new java.awt.Dimension(1540, 850));
         cuerpoGame.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imagenPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png"))); // NOI18N
         imagenPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cuerpoGame.add(imagenPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 690, 430));
+        cuerpoGame.add(imagenPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 890, 500));
 
         ImagenFondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ImagenFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/fondoImagen.png"))); // NOI18N
         ImagenFondo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cuerpoGame.add(ImagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 810, 388));
+        cuerpoGame.add(ImagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 1040, 430));
 
-        flechaIzquierda.setText("jLabel3");
+        flechaIzquierda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Flecha izquierda.png"))); // NOI18N
         cuerpoGame.add(flechaIzquierda, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, -1));
 
-        flechaDerecha.setText("jLabel4");
-        cuerpoGame.add(flechaDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 300, -1, -1));
+        flechaDerecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Flecha derecha.png"))); // NOI18N
+        cuerpoGame.add(flechaDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 300, 40, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

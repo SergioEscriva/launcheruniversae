@@ -10,11 +10,28 @@ package launcher;
  */
 public class principal extends javax.swing.JFrame {
 
+    //VistaGame1 vistaGame1 = new VistaGame1();
+    // Utility utilidades = new Utility();
     /**
      * Creates new form principal
      */
     public principal() {
         initComponents();
+        this.setLocationRelativeTo(this);
+
+        //utilidades.SetImageLabel(jLabel1, "src/imagenes/interfazGame/fondoImagen.png");
+        rsscalelabel.RSScaleLabel.setScaleLabel(jLabel1, "./imagenes/fondoImagen.png");
+
+        this.repaint();
+
+        /*
+        //vistaGame1 p1 = new vistaGame1();
+        cuerpoGame.setSize(1540, 850);
+        cuerpoGame.removeAll();
+        cuerpoGame.add(vistaGame1, BorderLayout.CENTER);
+        cuerpoGame.revalidate();
+        cuerpoGame.repaint();
+         */
     }
 
     /**
@@ -28,6 +45,8 @@ public class principal extends javax.swing.JFrame {
 
         FondoP = new javax.swing.JPanel();
         FondoJL = new javax.swing.JLabel();
+        cuerpoGame = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(14, 77, 144));
@@ -39,6 +58,23 @@ public class principal extends javax.swing.JFrame {
         FondoJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoBase.png"))); // NOI18N
         FondoJL.setText("jLabel1");
         FondoP.add(FondoJL, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
+
+        javax.swing.GroupLayout cuerpoGameLayout = new javax.swing.GroupLayout(cuerpoGame);
+        cuerpoGame.setLayout(cuerpoGameLayout);
+        cuerpoGameLayout.setHorizontalGroup(
+            cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 940, Short.MAX_VALUE)
+        );
+        cuerpoGameLayout.setVerticalGroup(
+            cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 590, Short.MAX_VALUE)
+        );
+
+        FondoP.add(cuerpoGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 940, 590));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoImagen.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        FondoP.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,6 +120,9 @@ public class principal extends javax.swing.JFrame {
 
             public void run() {
                 new principal().setVisible(true);
+                //VistaGame1 vistaGame = new VistaGame1();
+                //vistaGame.setVisible(true);
+
             }
 
         });
@@ -92,5 +131,7 @@ public class principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FondoJL;
     private javax.swing.JPanel FondoP;
+    private javax.swing.JPanel cuerpoGame;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

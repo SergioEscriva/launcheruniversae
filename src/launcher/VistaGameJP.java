@@ -12,16 +12,47 @@ import utilidades.Utility;
  * @author sergio
  */
 public class VistaGameJP extends javax.swing.JPanel {
-
+String imagenPath; 
     // int x = 0;
     /**
      * Creates new form VistaGameJP2
      */
     public VistaGameJP() {
         initComponents();
+        
+        
+        int botonHome = 5;
+        
+        
+        switch (botonHome){
+            case 1:
+               imagenPath = "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor";
+             break;
+             case 2:
+               imagenPath = "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque";
+             break;
+             case 3:
+               imagenPath = "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS";
+             break;
+             case 4:
+               imagenPath = "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia";
+             break;
+             case 5:
+               imagenPath = "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion";
+             break;
+             case 6:
+               imagenPath = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero";
+             break;
+             
+            
+        
+        }
+        ImageIcon image = new ImageIcon(imagenPath + "0.png");
+            imagenPrincipal.setIcon(image);
+        
         String imagenFondoImg = "src/imagenes/interfazGame/fondoImagen.png";
 
-        String imagenPrincipalImg = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png";
+        
 
         Utility utilidades = new Utility();
         imagenFondo.setSize(1050, 430);
@@ -240,7 +271,7 @@ public class VistaGameJP extends javax.swing.JPanel {
             x = 0;
         }
         // Añadimos numero de imagen y se van cambiando.
-        String imagenPrincipalImg = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero" + x + ".png";
+        String imagenPrincipalImg = imagenPath + x + ".png";
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
@@ -257,7 +288,7 @@ public class VistaGameJP extends javax.swing.JPanel {
         }
         x = x - 1;
         // Añadimos numero de imagen y se van cambiando.
-        String imagenPrincipalImg = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero" + x + ".png";
+        String imagenPrincipalImg = imagenPath + x + ".png";
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);

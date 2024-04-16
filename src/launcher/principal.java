@@ -70,6 +70,8 @@ public class principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(FondoP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -112,8 +114,8 @@ public class principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FondoJL;
-    private javax.swing.JPanel FondoP;
-    private javax.swing.JPanel cuerpoGame;
+    public static javax.swing.JPanel FondoP;
+    public static javax.swing.JPanel cuerpoGame;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

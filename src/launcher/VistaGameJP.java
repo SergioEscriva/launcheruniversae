@@ -29,6 +29,17 @@ public class VistaGameJP extends javax.swing.JPanel {
         utilidades.SetImageLabel(imagenFondo, imagenFondoImg);
 
         this.repaint();
+        
+        
+        //Inicializar bolitas
+        colocarBolitas();
+        colocarBolitaLlena();
+        
+        
+    
+        
+        
+        
     }
 
     /**
@@ -45,6 +56,12 @@ public class VistaGameJP extends javax.swing.JPanel {
         imagenFondo = new javax.swing.JLabel();
         flechaIzquierda = new javax.swing.JLabel();
         flechaDerecha = new javax.swing.JLabel();
+        BolitasPanel = new javax.swing.JPanel();
+        bolita1 = new javax.swing.JLabel();
+        bolita2 = new javax.swing.JLabel();
+        bolita3 = new javax.swing.JLabel();
+        bolita4 = new javax.swing.JLabel();
+        bolita5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(10, 38, 72));
         setMaximumSize(new java.awt.Dimension(1540, 850));
@@ -84,6 +101,50 @@ public class VistaGameJP extends javax.swing.JPanel {
         });
         cuerpoGame.add(flechaDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 300, 40, -1));
 
+        BolitasPanel.setBackground(new java.awt.Color(10, 38, 72));
+
+        bolita1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+
+        bolita2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+
+        bolita3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+
+        bolita4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+
+        bolita5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+
+        javax.swing.GroupLayout BolitasPanelLayout = new javax.swing.GroupLayout(BolitasPanel);
+        BolitasPanel.setLayout(BolitasPanelLayout);
+        BolitasPanelLayout.setHorizontalGroup(
+            BolitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BolitasPanelLayout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(bolita1)
+                .addGap(18, 18, 18)
+                .addComponent(bolita2)
+                .addGap(18, 18, 18)
+                .addComponent(bolita3)
+                .addGap(18, 18, 18)
+                .addComponent(bolita4)
+                .addGap(18, 18, 18)
+                .addComponent(bolita5)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+        BolitasPanelLayout.setVerticalGroup(
+            BolitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BolitasPanelLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(BolitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bolita1)
+                    .addComponent(bolita2)
+                    .addComponent(bolita3)
+                    .addComponent(bolita4)
+                    .addComponent(bolita5))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        cuerpoGame.add(BolitasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 320, 70));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,7 +168,7 @@ public class VistaGameJP extends javax.swing.JPanel {
         // Añadimos el número de imagen en la etiqueta text y recuperamos para sumarle 1, hasta 4
         int x = Integer.parseInt(imagenPrincipal.getText());
         x = x + 1;
-        if (x == 4) {
+        if (x == 5) {
             x = 0;
         }
         // Añadimos numero de imagen y se van cambiando.
@@ -115,6 +176,7 @@ public class VistaGameJP extends javax.swing.JPanel {
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
+        colocarBolitaLlena();
     }//GEN-LAST:event_flechaDerechaMouseClicked
 
     // Carrusel izquierda
@@ -123,7 +185,7 @@ public class VistaGameJP extends javax.swing.JPanel {
         // Añadimos el número de imagen en la etiqueta text y recuperamos para sumarle 1, hasta 4
         int x = Integer.parseInt(imagenPrincipal.getText());
         if (x <= 0) {
-            x = 4;
+            x = 5;
         }
         x = x - 1;
         // Añadimos numero de imagen y se van cambiando.
@@ -131,9 +193,62 @@ public class VistaGameJP extends javax.swing.JPanel {
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
+        colocarBolitaLlena();
     }//GEN-LAST:event_flechaIzquierdaMouseClicked
 
+    //Método para bolitas llenas
+    public void colocarBolitaLlena(){
+        colocarBolitas();
+         String imagenBolitaLlena = "src/imagenes/interfazGame/PuntoCarruselFilled.png";
+        ImageIcon image2 = new ImageIcon(imagenBolitaLlena);
+        
+      int x = Integer.parseInt(imagenPrincipal.getText());
+      
+      switch (x){
+          case 0: 
+              bolita1.setIcon(image2);
+              break;
+          case 1: 
+              bolita2.setIcon(image2);
+              break;
+          case 2: 
+              bolita3.setIcon(image2);
+              break;
+          case 3: 
+              bolita4.setIcon(image2);
+              break;
+          case 4: 
+              bolita5.setIcon(image2);
+              break;
+         
+          
+          
+          
+      }
+    }
+      
+      //Método para bolitas vacías
+      
+     public void colocarBolitas(){
+      String imagenBolitaVacia = "src/imagenes/interfazGame/PuntoCarruselEmpty.png";
+       
+        
+        ImageIcon image = new ImageIcon(imagenBolitaVacia);
+        bolita1.setIcon(image);
+        bolita2.setIcon(image);
+        bolita3.setIcon(image);
+        bolita4.setIcon(image);
+        bolita5.setIcon(image);
+        
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BolitasPanel;
+    private javax.swing.JLabel bolita1;
+    private javax.swing.JLabel bolita2;
+    private javax.swing.JLabel bolita3;
+    private javax.swing.JLabel bolita4;
+    private javax.swing.JLabel bolita5;
     private javax.swing.JPanel cuerpoGame;
     private javax.swing.JLabel flechaDerecha;
     private javax.swing.JLabel flechaIzquierda;

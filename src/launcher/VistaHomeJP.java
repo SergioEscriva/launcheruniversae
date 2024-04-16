@@ -14,8 +14,12 @@ public class VistaHomeJP extends javax.swing.JPanel {
      * Creates new form VistaHomeJP
      */
     public VistaHomeJP() {
-        initComponents();
+        initComponents(); 
+       
+
+        
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,19 +30,94 @@ public class VistaHomeJP extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        RescateBtn = new javax.swing.JButton();
+        TipologíaBtn = new javax.swing.JButton();
+        ProtocolBtn = new javax.swing.JButton();
+        ManiobrasBtn = new javax.swing.JButton();
+        SeñalizaciónBtn = new javax.swing.JButton();
+        Embarque = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(10, 38, 72));
+        setToolTipText("");
+        setPreferredSize(new java.awt.Dimension(1540, 850));
+        setVerifyInputWhenFocusTarget(false);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        RescateBtn.setBackground(new java.awt.Color(0, 0, 0));
+        RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate.png"))); // NOI18N
+        RescateBtn.setContentAreaFilled(false);
+        RescateBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate.png"))); // NOI18N
+        RescateBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Embarque2.png"))); // NOI18N
+        RescateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RescateBtnMouseExited(evt);
+            }
+        });
+        add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 390, 290));
+
+        TipologíaBtn.setBackground(new java.awt.Color(182, 225, 255));
+        TipologíaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Tipología.png"))); // NOI18N
+        TipologíaBtn.setActionCommand("");
+        TipologíaBtn.setContentAreaFilled(false);
+        add(TipologíaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 50, 390, 290));
+
+        ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
+        ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Protocolo.png"))); // NOI18N
+        ProtocolBtn.setContentAreaFilled(false);
+        ProtocolBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProtocolBtnActionPerformed(evt);
+            }
+        });
+        add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 390, 290));
+
+        ManiobrasBtn.setBackground(new java.awt.Color(182, 225, 255));
+        ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Maniobras.png"))); // NOI18N
+        ManiobrasBtn.setContentAreaFilled(false);
+        ManiobrasBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ManiobrasBtnActionPerformed(evt);
+            }
+        });
+        add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, 390, 290));
+
+        SeñalizaciónBtn.setBackground(new java.awt.Color(182, 225, 255));
+        SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Señalizaciónj.png"))); // NOI18N
+        SeñalizaciónBtn.setContentAreaFilled(false);
+        SeñalizaciónBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SeñalizaciónBtnActionPerformed(evt);
+            }
+        });
+        add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 410, 390, 290));
+
+        Embarque.setBackground(new java.awt.Color(182, 225, 249));
+        Embarque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Embarque.png"))); // NOI18N
+        add(Embarque, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, 380, 290));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ProtocolBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtocolBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProtocolBtnActionPerformed
+
+    private void ManiobrasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManiobrasBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ManiobrasBtnActionPerformed
+
+    private void SeñalizaciónBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SeñalizaciónBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SeñalizaciónBtnActionPerformed
+
+    private void RescateBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtnMouseExited
+       
+    }//GEN-LAST:event_RescateBtnMouseExited
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Embarque;
+    private javax.swing.JButton ManiobrasBtn;
+    private javax.swing.JButton ProtocolBtn;
+    private javax.swing.JButton RescateBtn;
+    private javax.swing.JButton SeñalizaciónBtn;
+    private javax.swing.JButton TipologíaBtn;
     // End of variables declaration//GEN-END:variables
 }

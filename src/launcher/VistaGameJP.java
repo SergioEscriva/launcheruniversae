@@ -62,6 +62,13 @@ public class VistaGameJP extends javax.swing.JPanel {
         bolita3 = new javax.swing.JLabel();
         bolita4 = new javax.swing.JLabel();
         bolita5 = new javax.swing.JLabel();
+        ComenzarBtn = new javax.swing.JLabel();
+        descripciónPanel = new javax.swing.JPanel();
+        barraJL = new javax.swing.JLabel();
+        jScrollTitulo = new javax.swing.JScrollPane();
+        jTTitulo = new javax.swing.JTextArea();
+        jScrollTexto = new javax.swing.JScrollPane();
+        jTextTexto = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(10, 38, 72));
         setMaximumSize(new java.awt.Dimension(1540, 850));
@@ -83,7 +90,7 @@ public class VistaGameJP extends javax.swing.JPanel {
         imagenFondo.setMaximumSize(new java.awt.Dimension(1050, 430));
         imagenFondo.setMinimumSize(new java.awt.Dimension(1050, 430));
         imagenFondo.setPreferredSize(new java.awt.Dimension(1050, 430));
-        cuerpoGame.add(imagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
+        cuerpoGame.add(imagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 1040, -1));
 
         flechaIzquierda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Flecha izquierda.png"))); // NOI18N
         flechaIzquierda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -99,7 +106,7 @@ public class VistaGameJP extends javax.swing.JPanel {
                 flechaDerechaMouseClicked(evt);
             }
         });
-        cuerpoGame.add(flechaDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 300, 40, -1));
+        cuerpoGame.add(flechaDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 300, 40, -1));
 
         BolitasPanel.setBackground(new java.awt.Color(10, 38, 72));
 
@@ -134,16 +141,77 @@ public class VistaGameJP extends javax.swing.JPanel {
             BolitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BolitasPanelLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(BolitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(BolitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bolita1)
-                    .addComponent(bolita2)
                     .addComponent(bolita3)
-                    .addComponent(bolita4)
-                    .addComponent(bolita5))
-                .addContainerGap(29, Short.MAX_VALUE))
+                    .addComponent(bolita4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bolita5, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bolita2))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        cuerpoGame.add(BolitasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 320, 70));
+        cuerpoGame.add(BolitasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 320, 50));
+
+        ComenzarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Comenzar.png"))); // NOI18N
+        cuerpoGame.add(ComenzarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 766, 260, 50));
+
+        descripciónPanel.setBackground(new java.awt.Color(10, 38, 72));
+
+        barraJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Barrita aislada descripción.png"))); // NOI18N
+
+        jScrollTitulo.setBackground(new java.awt.Color(10, 38, 72));
+        jScrollTitulo.setBorder(null);
+        jScrollTitulo.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollTitulo.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        jTTitulo.setEditable(false);
+        jTTitulo.setBackground(new java.awt.Color(10, 38, 72));
+        jTTitulo.setColumns(20);
+        jTTitulo.setFont(new java.awt.Font("Raleway Black", 0, 18)); // NOI18N
+        jTTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jTTitulo.setRows(5);
+        jTTitulo.setText("Título de prueba");
+        jTTitulo.setBorder(null);
+        jScrollTitulo.setViewportView(jTTitulo);
+
+        jScrollTexto.setBorder(null);
+
+        jTextTexto.setEditable(false);
+        jTextTexto.setBackground(new java.awt.Color(10, 38, 72));
+        jTextTexto.setColumns(20);
+        jTextTexto.setFont(new java.awt.Font("Raleway", 0, 12)); // NOI18N
+        jTextTexto.setForeground(new java.awt.Color(255, 255, 255));
+        jTextTexto.setRows(5);
+        jTextTexto.setText("Texto de prueba");
+        jTextTexto.setBorder(null);
+        jScrollTexto.setViewportView(jTextTexto);
+
+        javax.swing.GroupLayout descripciónPanelLayout = new javax.swing.GroupLayout(descripciónPanel);
+        descripciónPanel.setLayout(descripciónPanelLayout);
+        descripciónPanelLayout.setHorizontalGroup(
+            descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(descripciónPanelLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollTexto)
+                    .addGroup(descripciónPanelLayout.createSequentialGroup()
+                        .addComponent(barraJL, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        descripciónPanelLayout.setVerticalGroup(
+            descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(descripciónPanelLayout.createSequentialGroup()
+                .addGroup(descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(barraJL))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addComponent(jScrollTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        cuerpoGame.add(descripciónPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 730, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -244,15 +312,22 @@ public class VistaGameJP extends javax.swing.JPanel {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BolitasPanel;
+    private javax.swing.JLabel ComenzarBtn;
+    private javax.swing.JLabel barraJL;
     private javax.swing.JLabel bolita1;
     private javax.swing.JLabel bolita2;
     private javax.swing.JLabel bolita3;
     private javax.swing.JLabel bolita4;
     private javax.swing.JLabel bolita5;
     private javax.swing.JPanel cuerpoGame;
+    private javax.swing.JPanel descripciónPanel;
     private javax.swing.JLabel flechaDerecha;
     private javax.swing.JLabel flechaIzquierda;
     private javax.swing.JLabel imagenFondo;
     private javax.swing.JLabel imagenPrincipal;
+    private javax.swing.JScrollPane jScrollTexto;
+    private javax.swing.JScrollPane jScrollTitulo;
+    private javax.swing.JTextArea jTTitulo;
+    private javax.swing.JTextArea jTextTexto;
     // End of variables declaration//GEN-END:variables
 }

@@ -48,11 +48,12 @@ public class principal1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(14, 77, 144));
         setExtendedState(6);
+        setUndecorated(true);
 
         FondoP.setBackground(new java.awt.Color(255, 255, 255));
         FondoP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cuerpoGame.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cuerpoGame.setBackground(new java.awt.Color(10, 38, 72));
         cuerpoGame.setMinimumSize(new java.awt.Dimension(1540, 850));
         cuerpoGame.setPreferredSize(new java.awt.Dimension(1540, 850));
 
@@ -60,11 +61,11 @@ public class principal1 extends javax.swing.JFrame {
         cuerpoGame.setLayout(cuerpoGameLayout);
         cuerpoGameLayout.setHorizontalGroup(
             cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1546, Short.MAX_VALUE)
+            .addGap(0, 1550, Short.MAX_VALUE)
         );
         cuerpoGameLayout.setVerticalGroup(
             cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 876, Short.MAX_VALUE)
+            .addGap(0, 880, Short.MAX_VALUE)
         );
 
         FondoP.add(cuerpoGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 1550, 880));

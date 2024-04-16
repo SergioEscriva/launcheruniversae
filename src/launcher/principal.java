@@ -29,6 +29,7 @@ public class principal extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoP = new javax.swing.JPanel();
+        cuerpo = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         launcherBtn0 = new javax.swing.JButton();
         launcherBtn1 = new javax.swing.JButton();
@@ -53,6 +54,23 @@ public class principal extends javax.swing.JFrame {
 
         FondoP.setBackground(new java.awt.Color(255, 255, 255));
         FondoP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cuerpo.setBackground(new java.awt.Color(10, 38, 72));
+        cuerpo.setMaximumSize(new java.awt.Dimension(1540, 850));
+        cuerpo.setMinimumSize(new java.awt.Dimension(1540, 850));
+
+        javax.swing.GroupLayout cuerpoLayout = new javax.swing.GroupLayout(cuerpo);
+        cuerpo.setLayout(cuerpoLayout);
+        cuerpoLayout.setHorizontalGroup(
+            cuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1540, Short.MAX_VALUE)
+        );
+        cuerpoLayout.setVerticalGroup(
+            cuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 850, Short.MAX_VALUE)
+        );
+
+        FondoP.add(cuerpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
 
         jPanel1.setOpaque(false);
 
@@ -214,10 +232,10 @@ public class principal extends javax.swing.JFrame {
 
     private void launcherBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launcherBtn0ActionPerformed
         // Esta acción lleva a la página Home
-         VistaHomeJP p1 = new VistaHomeJP();
+        VistaHomeJP p1 = new VistaHomeJP();
         p1.setSize(1963, 1082);
         p1.setLocation(0, 0);
-        
+
         FondoJL.removeAll();
         FondoJL.add(p1, BorderLayout.CENTER);
         FondoJL.revalidate();
@@ -264,6 +282,7 @@ public class principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FondoJL;
     private javax.swing.JPanel FondoP;
+    private javax.swing.JPanel cuerpo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton launcherBtn0;
     private javax.swing.JButton launcherBtn1;

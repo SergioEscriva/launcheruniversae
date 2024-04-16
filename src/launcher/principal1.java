@@ -18,7 +18,7 @@ public class principal1 extends javax.swing.JFrame {
      */
     public principal1() {
         initComponents();
-        VistaGameJP2 frame1 = new VistaGameJP2();
+        VistaGameJP frame1 = new VistaGameJP();
         ShowPanel(frame1);
     }
 

@@ -1,27 +1,33 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package launcher;
 
+import javax.swing.ImageIcon;
 import utilidades.Utility;
 
 /**
  *
  * @author sergio
  */
-public class VistaGameJP extends javax.swing.JFrame {
+public class VistaGameJP extends javax.swing.JPanel {
 
-    Utility utilidades = new Utility();
-
+    // int x = 0;
     /**
-     * Creates new form NewJFrame
+     * Creates new form VistaGameJP2
      */
     public VistaGameJP() {
         initComponents();
-        //this.setLocationRelativeTo(this);
-        utilidades.SetImageLabel(ImagenFondo, "src/imagenes/interfazGame/fondoImagen.png");
-        utilidades.SetImageLabel(imagenPrincipal, "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png");
+        String imagenFondoImg = "src/imagenes/interfazGame/fondoImagen.png";
+
+        String imagenPrincipalImg = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png";
+
+        Utility utilidades = new Utility();
+        imagenFondo.setSize(1050, 430);
+
+        utilidades.SetImageLabel(imagenFondo, imagenFondoImg);
+
         this.repaint();
     }
 
@@ -36,97 +42,102 @@ public class VistaGameJP extends javax.swing.JFrame {
 
         cuerpoGame = new javax.swing.JPanel();
         imagenPrincipal = new javax.swing.JLabel();
-        ImagenFondo = new javax.swing.JLabel();
+        imagenFondo = new javax.swing.JLabel();
         flechaIzquierda = new javax.swing.JLabel();
         flechaDerecha = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(14, 77, 144));
+        setBackground(new java.awt.Color(10, 38, 72));
+        setMaximumSize(new java.awt.Dimension(1540, 850));
+        setMinimumSize(new java.awt.Dimension(1540, 850));
+        setPreferredSize(new java.awt.Dimension(1540, 850));
 
-        cuerpoGame.setBackground(new java.awt.Color(14, 77, 144));
+        cuerpoGame.setBackground(new java.awt.Color(10, 38, 72));
         cuerpoGame.setMaximumSize(new java.awt.Dimension(720, 450));
         cuerpoGame.setMinimumSize(new java.awt.Dimension(1540, 850));
         cuerpoGame.setPreferredSize(new java.awt.Dimension(1540, 850));
         cuerpoGame.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imagenPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png"))); // NOI18N
-        imagenPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        imagenPrincipal.setText("0");
         cuerpoGame.add(imagenPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 890, 500));
 
-        ImagenFondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImagenFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/fondoImagen.png"))); // NOI18N
-        ImagenFondo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cuerpoGame.add(ImagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 1040, 430));
+        imagenFondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imagenFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/fondoImagen.png"))); // NOI18N
+        imagenFondo.setMaximumSize(new java.awt.Dimension(1050, 430));
+        imagenFondo.setMinimumSize(new java.awt.Dimension(1050, 430));
+        imagenFondo.setPreferredSize(new java.awt.Dimension(1050, 430));
+        cuerpoGame.add(imagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
 
         flechaIzquierda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Flecha izquierda.png"))); // NOI18N
+        flechaIzquierda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaIzquierdaMouseClicked(evt);
+            }
+        });
         cuerpoGame.add(flechaIzquierda, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, -1));
 
         flechaDerecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Flecha derecha.png"))); // NOI18N
+        flechaDerecha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaDerechaMouseClicked(evt);
+            }
+        });
         cuerpoGame.add(flechaDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 300, 40, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cuerpoGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cuerpoGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cuerpoGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cuerpoGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaGameJP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaGameJP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaGameJP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaGameJP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void flechaDerechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaDerechaMouseClicked
+        setLayout(null);
+        // Añadimos el número de imagen en la etiqueta text y recuperamos para sumarle 1, hasta 4
+        int x = Integer.parseInt(imagenPrincipal.getText());
+        x = x + 1;
+        if (x == 4) {
+            x = 0;
         }
-        //</editor-fold>
-        //</editor-fold>
+        // Añadimos numero de imagen y se van cambiando.
+        String imagenPrincipalImg = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero" + x + ".png";
+        imagenPrincipal.setText(String.valueOf(x));
+        ImageIcon image = new ImageIcon(imagenPrincipalImg);
+        imagenPrincipal.setIcon(image);
+    }//GEN-LAST:event_flechaDerechaMouseClicked
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-
-            public void run() {
-                new VistaGameJP().setVisible(true);
-            }
-
-        });
-    }
+    // Carrusel izquierda
+    private void flechaIzquierdaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaIzquierdaMouseClicked
+        setLayout(null);
+        // Añadimos el número de imagen en la etiqueta text y recuperamos para sumarle 1, hasta 4
+        int x = Integer.parseInt(imagenPrincipal.getText());
+        if (x <= 0) {
+            x = 4;
+        }
+        x = x - 1;
+        // Añadimos numero de imagen y se van cambiando.
+        String imagenPrincipalImg = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero" + x + ".png";
+        imagenPrincipal.setText(String.valueOf(x));
+        ImageIcon image = new ImageIcon(imagenPrincipalImg);
+        imagenPrincipal.setIcon(image);
+    }//GEN-LAST:event_flechaIzquierdaMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ImagenFondo;
     private javax.swing.JPanel cuerpoGame;
     private javax.swing.JLabel flechaDerecha;
     private javax.swing.JLabel flechaIzquierda;
+    private javax.swing.JLabel imagenFondo;
     private javax.swing.JLabel imagenPrincipal;
     // End of variables declaration//GEN-END:variables
 }

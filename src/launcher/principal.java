@@ -4,6 +4,9 @@
  */
 package launcher;
 
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author sergio
@@ -15,6 +18,18 @@ public class principal extends javax.swing.JFrame {
      */
     public principal() {
         initComponents();
+        VistaHomeJP frame1 = new VistaHomeJP();
+        ShowPanel(frame1);
+        
+    }
+     private void ShowPanel(JPanel p) {
+
+        p.setSize(1540, 850);
+        p.setLocation(0, 0);
+        cuerpoGame.removeAll();
+        cuerpoGame.add(p, BorderLayout.CENTER);
+        cuerpoGame.revalidate();
+        cuerpoGame.repaint(); 
     }
 
     /**
@@ -27,6 +42,7 @@ public class principal extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoP = new javax.swing.JPanel();
+        cuerpoGame = new javax.swing.JPanel();
         FondoJL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -35,6 +51,22 @@ public class principal extends javax.swing.JFrame {
 
         FondoP.setBackground(new java.awt.Color(255, 255, 255));
         FondoP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cuerpoGame.setMaximumSize(new java.awt.Dimension(1540, 850));
+        cuerpoGame.setMinimumSize(new java.awt.Dimension(1540, 850));
+
+        javax.swing.GroupLayout cuerpoGameLayout = new javax.swing.GroupLayout(cuerpoGame);
+        cuerpoGame.setLayout(cuerpoGameLayout);
+        cuerpoGameLayout.setHorizontalGroup(
+            cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1540, Short.MAX_VALUE)
+        );
+        cuerpoGameLayout.setVerticalGroup(
+            cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 850, Short.MAX_VALUE)
+        );
+
+        FondoP.add(cuerpoGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, -1, -1));
 
         FondoJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoBase.png"))); // NOI18N
         FondoJL.setText("jLabel1");
@@ -92,5 +124,6 @@ public class principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FondoJL;
     private javax.swing.JPanel FondoP;
+    private javax.swing.JPanel cuerpoGame;
     // End of variables declaration//GEN-END:variables
 }

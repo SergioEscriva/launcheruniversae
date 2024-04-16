@@ -31,19 +31,19 @@ public class principal extends javax.swing.JFrame {
         FondoP = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         launcherBtn0 = new javax.swing.JButton();
-        launcher1 = new javax.swing.JLabel();
-        launcher2 = new javax.swing.JLabel();
-        launcher3 = new javax.swing.JLabel();
-        launcher4 = new javax.swing.JLabel();
-        launcher5 = new javax.swing.JLabel();
-        launcher6 = new javax.swing.JLabel();
-        launcher7 = new javax.swing.JLabel();
-        launcher8 = new javax.swing.JLabel();
-        launcher9 = new javax.swing.JLabel();
-        launcher10 = new javax.swing.JLabel();
-        launcher11 = new javax.swing.JLabel();
-        launcher12 = new javax.swing.JLabel();
-        launcher13 = new javax.swing.JLabel();
+        launcherBtn1 = new javax.swing.JButton();
+        launcherBtn2 = new javax.swing.JButton();
+        launcherBtn3 = new javax.swing.JButton();
+        launcherBtn4 = new javax.swing.JButton();
+        launcherBtn5 = new javax.swing.JButton();
+        launcherBtn6 = new javax.swing.JButton();
+        launcherBtn7 = new javax.swing.JButton();
+        launcherBtn8 = new javax.swing.JButton();
+        launcherBtn9 = new javax.swing.JButton();
+        launcherBtn10 = new javax.swing.JButton();
+        launcherBtn11 = new javax.swing.JButton();
+        launcherBtn12 = new javax.swing.JButton();
+        launcherBtn13 = new javax.swing.JButton();
         FondoJL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,123 +67,130 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        launcher1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
-        launcher1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        launcher1.setPreferredSize(new java.awt.Dimension(103, 111));
+        launcherBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
+        launcherBtn1.setContentAreaFilled(false);
+        launcherBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
+        launcherBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn1.png"))); // NOI18N
 
-        launcher2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
-        launcher2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
+        launcherBtn2.setContentAreaFilled(false);
+        launcherBtn2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
+        launcherBtn2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn2.png"))); // NOI18N
 
-        launcher3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton3.png"))); // NOI18N
-        launcher3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton3.png"))); // NOI18N
+        launcherBtn3.setContentAreaFilled(false);
+        launcherBtn3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton3.png"))); // NOI18N
+        launcherBtn3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn3.png"))); // NOI18N
 
-        launcher4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton4.png"))); // NOI18N
-        launcher4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton4.png"))); // NOI18N
+        launcherBtn4.setContentAreaFilled(false);
+        launcherBtn4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton4.png"))); // NOI18N
+        launcherBtn4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn4.png"))); // NOI18N
 
-        launcher5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton5.png"))); // NOI18N
-        launcher5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton5.png"))); // NOI18N
+        launcherBtn5.setContentAreaFilled(false);
+        launcherBtn5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton5.png"))); // NOI18N
+        launcherBtn5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn5.png"))); // NOI18N
 
-        launcher6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton6.png"))); // NOI18N
-        launcher6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton6.png"))); // NOI18N
+        launcherBtn6.setContentAreaFilled(false);
+        launcherBtn6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton6.png"))); // NOI18N
+        launcherBtn6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn6.png"))); // NOI18N
 
-        launcher7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
-        launcher7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
+        launcherBtn7.setContentAreaFilled(false);
+        launcherBtn7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
+        launcherBtn7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn7.png"))); // NOI18N
 
-        launcher8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton8.png"))); // NOI18N
-        launcher8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton8.png"))); // NOI18N
+        launcherBtn8.setContentAreaFilled(false);
+        launcherBtn8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton8.png"))); // NOI18N
+        launcherBtn8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn8.png"))); // NOI18N
 
-        launcher9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
-        launcher9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
+        launcherBtn9.setContentAreaFilled(false);
+        launcherBtn9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
+        launcherBtn9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn9.png"))); // NOI18N
 
-        launcher10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton10.png"))); // NOI18N
-        launcher10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton10.png"))); // NOI18N
+        launcherBtn10.setContentAreaFilled(false);
+        launcherBtn10.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton10.png"))); // NOI18N
+        launcherBtn10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn10.png"))); // NOI18N
 
-        launcher11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton11.png"))); // NOI18N
-        launcher11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton11.png"))); // NOI18N
+        launcherBtn11.setContentAreaFilled(false);
+        launcherBtn11.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton11.png"))); // NOI18N
+        launcherBtn11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn11.png"))); // NOI18N
 
-        launcher12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton12.png"))); // NOI18N
-        launcher12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton12.png"))); // NOI18N
+        launcherBtn12.setContentAreaFilled(false);
+        launcherBtn12.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton12.png"))); // NOI18N
+        launcherBtn12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn12.png"))); // NOI18N
 
-        launcher13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        launcher13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton13.png"))); // NOI18N
-        launcher13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        launcherBtn13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton13.png"))); // NOI18N
+        launcherBtn13.setContentAreaFilled(false);
+        launcherBtn13.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton13.png"))); // NOI18N
+        launcherBtn13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn13.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(launcherBtn0, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn0, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher7, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher9, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn10, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher11, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(launcherBtn11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher12)
+                .addComponent(launcherBtn12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(launcher13)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(launcherBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {launcher1, launcher10, launcher11, launcher12, launcher13, launcher2, launcher3, launcher4, launcher5, launcher6, launcher7, launcher8, launcher9});
-
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(launcherBtn10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(launcher1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher9, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher10, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher12, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(launcher13, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(launcherBtn0, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(launcherBtn13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(launcherBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(launcherBtn0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addComponent(launcherBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addComponent(launcherBtn11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(launcherBtn12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {launcher1, launcher10, launcher11, launcher12, launcher13, launcher2, launcher3, launcher4, launcher5, launcher6, launcher7, launcher8, launcher9});
-
-        FondoP.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 1550, 130));
+        FondoP.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 1550, 170));
 
         FondoJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoBase.png"))); // NOI18N
         FondoJL.setText("jLabel1");
@@ -258,19 +265,19 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel FondoJL;
     private javax.swing.JPanel FondoP;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel launcher1;
-    private javax.swing.JLabel launcher10;
-    private javax.swing.JLabel launcher11;
-    private javax.swing.JLabel launcher12;
-    private javax.swing.JLabel launcher13;
-    private javax.swing.JLabel launcher2;
-    private javax.swing.JLabel launcher3;
-    private javax.swing.JLabel launcher4;
-    private javax.swing.JLabel launcher5;
-    private javax.swing.JLabel launcher6;
-    private javax.swing.JLabel launcher7;
-    private javax.swing.JLabel launcher8;
-    private javax.swing.JLabel launcher9;
     private javax.swing.JButton launcherBtn0;
+    private javax.swing.JButton launcherBtn1;
+    private javax.swing.JButton launcherBtn10;
+    private javax.swing.JButton launcherBtn11;
+    private javax.swing.JButton launcherBtn12;
+    private javax.swing.JButton launcherBtn13;
+    private javax.swing.JButton launcherBtn2;
+    private javax.swing.JButton launcherBtn3;
+    private javax.swing.JButton launcherBtn4;
+    private javax.swing.JButton launcherBtn5;
+    private javax.swing.JButton launcherBtn6;
+    private javax.swing.JButton launcherBtn7;
+    private javax.swing.JButton launcherBtn8;
+    private javax.swing.JButton launcherBtn9;
     // End of variables declaration//GEN-END:variables
 }

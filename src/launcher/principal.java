@@ -48,7 +48,6 @@ public class principal extends javax.swing.JFrame {
         launcherBtn13 = new javax.swing.JButton();
         FondoJL = new javax.swing.JLabel();
         cuerpoGame = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(14, 77, 144));
@@ -232,10 +231,6 @@ public class principal extends javax.swing.JFrame {
 
         FondoP.add(cuerpoGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 940, 590));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoImagen.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        FondoP.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, -1, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -313,7 +308,6 @@ public class principal extends javax.swing.JFrame {
     public static javax.swing.JPanel FondoP;
     private javax.swing.JPanel cuerpo;
     public static javax.swing.JPanel cuerpoGame;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton launcherBtn0;
     private javax.swing.JButton launcherBtn1;

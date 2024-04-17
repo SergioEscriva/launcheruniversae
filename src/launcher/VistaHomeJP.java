@@ -27,6 +27,7 @@ public class VistaHomeJP extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cuerpoHome = new javax.swing.JPanel();
         RescateBtn1 = new javax.swing.JButton();
         RescateBtn = new javax.swing.JButton();
         TipologíaBtn = new javax.swing.JButton();
@@ -38,7 +39,12 @@ public class VistaHomeJP extends javax.swing.JPanel {
         setToolTipText("");
         setPreferredSize(new java.awt.Dimension(1540, 850));
         setVerifyInputWhenFocusTarget(false);
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cuerpoHome.setBackground(new java.awt.Color(10, 38, 72));
+        cuerpoHome.setToolTipText("");
+        cuerpoHome.setPreferredSize(new java.awt.Dimension(1540, 850));
+        cuerpoHome.setVerifyInputWhenFocusTarget(false);
+        cuerpoHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         RescateBtn1.setBackground(new java.awt.Color(0, 0, 0));
         RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Embarque.png"))); // NOI18N
@@ -50,7 +56,7 @@ public class VistaHomeJP extends javax.swing.JPanel {
                 RescateBtn1MouseExited(evt);
             }
         });
-        add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 400, 310));
+        cuerpoHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 400, 310));
 
         RescateBtn.setBackground(new java.awt.Color(0, 0, 0));
         RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate.png"))); // NOI18N
@@ -62,14 +68,14 @@ public class VistaHomeJP extends javax.swing.JPanel {
                 RescateBtnMouseExited(evt);
             }
         });
-        add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
+        cuerpoHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
 
         TipologíaBtn.setBackground(new java.awt.Color(182, 225, 255));
         TipologíaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Tipología.png"))); // NOI18N
         TipologíaBtn.setContentAreaFilled(false);
         TipologíaBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Tipología.png"))); // NOI18N
         TipologíaBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Tipologia2.png"))); // NOI18N
-        add(TipologíaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
+        cuerpoHome.add(TipologíaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
 
         ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
         ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Protocolo.png"))); // NOI18N
@@ -81,7 +87,7 @@ public class VistaHomeJP extends javax.swing.JPanel {
                 ProtocolBtnActionPerformed(evt);
             }
         });
-        add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 410, 320));
+        cuerpoHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 410, 320));
 
         ManiobrasBtn.setBackground(new java.awt.Color(182, 225, 255));
         ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Maniobras.png"))); // NOI18N
@@ -93,7 +99,7 @@ public class VistaHomeJP extends javax.swing.JPanel {
                 ManiobrasBtnActionPerformed(evt);
             }
         });
-        add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 400, 320));
+        cuerpoHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 400, 320));
 
         SeñalizaciónBtn.setBackground(new java.awt.Color(182, 225, 255));
         SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Señalizaciónj.png"))); // NOI18N
@@ -105,7 +111,18 @@ public class VistaHomeJP extends javax.swing.JPanel {
                 SeñalizaciónBtnActionPerformed(evt);
             }
         });
-        add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 410, 430, 310));
+        cuerpoHome.add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 410, 430, 310));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cuerpoHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cuerpoHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void ProtocolBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtocolBtnActionPerformed
@@ -135,5 +152,6 @@ public class VistaHomeJP extends javax.swing.JPanel {
     private javax.swing.JButton RescateBtn1;
     private javax.swing.JButton SeñalizaciónBtn;
     private javax.swing.JButton TipologíaBtn;
+    private javax.swing.JPanel cuerpoHome;
     // End of variables declaration//GEN-END:variables
 }

@@ -47,7 +47,6 @@ public class principal extends javax.swing.JFrame {
         launcherBtn12 = new javax.swing.JButton();
         launcherBtn13 = new javax.swing.JButton();
         FondoJL = new javax.swing.JLabel();
-        cuerpoGame = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(14, 77, 144));
@@ -72,14 +71,14 @@ public class principal extends javax.swing.JFrame {
             .addGap(0, 850, Short.MAX_VALUE)
         );
 
-        FondoP.add(cuerpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
+        FondoP.add(cuerpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, -1, -1));
 
         jPanel1.setOpaque(false);
 
         launcherBtn0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
         launcherBtn0.setContentAreaFilled(false);
         launcherBtn0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        launcherBtn0.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
+        launcherBtn0.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/launcheBtn00.png"))); // NOI18N
         launcherBtn0.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/launcheBtn00.png"))); // NOI18N
         launcherBtn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,19 +217,6 @@ public class principal extends javax.swing.JFrame {
         FondoP.add(FondoJL, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1920, 1080));
         FondoJL.getAccessibleContext().setAccessibleName("");
 
-        javax.swing.GroupLayout cuerpoGameLayout = new javax.swing.GroupLayout(cuerpoGame);
-        cuerpoGame.setLayout(cuerpoGameLayout);
-        cuerpoGameLayout.setHorizontalGroup(
-            cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 940, Short.MAX_VALUE)
-        );
-        cuerpoGameLayout.setVerticalGroup(
-            cuerpoGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
-        );
-
-        FondoP.add(cuerpoGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 940, 590));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -252,7 +238,6 @@ public class principal extends javax.swing.JFrame {
 
         VistaHomeJP p1 = new VistaHomeJP();
         ShowPanel(p1);
-
     }//GEN-LAST:event_launcherBtn0ActionPerformed
 
     // Abrir panel cuerpo
@@ -307,7 +292,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel FondoJL;
     public static javax.swing.JPanel FondoP;
     private javax.swing.JPanel cuerpo;
-    public static javax.swing.JPanel cuerpoGame;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton launcherBtn0;
     private javax.swing.JButton launcherBtn1;

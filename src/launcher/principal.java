@@ -4,8 +4,7 @@
  */
 package launcher;
 
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
+import utilidades.Utility;
 
 /**
  *
@@ -13,11 +12,16 @@ import javax.swing.JPanel;
  */
 public class principal extends javax.swing.JFrame {
 
+    VistaHome vistaHome = new VistaHome();
+    Utility utility = new Utility();
+
     /**
      * Creates new form principal
      */
     public principal() {
         initComponents();
+        utility.showPanel(cuerpoPrincipal, vistaHome);
+
     }
 
     /**
@@ -30,7 +34,6 @@ public class principal extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoP = new javax.swing.JPanel();
-        cuerpo = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         launcherBtn0 = new javax.swing.JButton();
         launcherBtn1 = new javax.swing.JButton();
@@ -46,39 +49,24 @@ public class principal extends javax.swing.JFrame {
         launcherBtn11 = new javax.swing.JButton();
         launcherBtn12 = new javax.swing.JButton();
         launcherBtn13 = new javax.swing.JButton();
+        cuerpoPrincipal = new javax.swing.JPanel();
         FondoJL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(14, 77, 144));
+        setBackground(new java.awt.Color(255, 255, 255));
         setExtendedState(6);
-        setPreferredSize(new java.awt.Dimension(1963, 1082));
+        setUndecorated(true);
 
         FondoP.setBackground(new java.awt.Color(255, 255, 255));
+        FondoP.setMaximumSize(new java.awt.Dimension(1540, 850));
         FondoP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        cuerpo.setBackground(new java.awt.Color(10, 38, 72));
-        cuerpo.setMaximumSize(new java.awt.Dimension(1540, 850));
-        cuerpo.setMinimumSize(new java.awt.Dimension(1540, 850));
-
-        javax.swing.GroupLayout cuerpoLayout = new javax.swing.GroupLayout(cuerpo);
-        cuerpo.setLayout(cuerpoLayout);
-        cuerpoLayout.setHorizontalGroup(
-            cuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1540, Short.MAX_VALUE)
-        );
-        cuerpoLayout.setVerticalGroup(
-            cuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 850, Short.MAX_VALUE)
-        );
-
-        FondoP.add(cuerpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, -1, -1));
 
         jPanel1.setOpaque(false);
 
         launcherBtn0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
         launcherBtn0.setContentAreaFilled(false);
         launcherBtn0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        launcherBtn0.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/launcheBtn00.png"))); // NOI18N
+        launcherBtn0.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
         launcherBtn0.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/launcheBtn00.png"))); // NOI18N
         launcherBtn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +78,11 @@ public class principal extends javax.swing.JFrame {
         launcherBtn1.setContentAreaFilled(false);
         launcherBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
         launcherBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn1.png"))); // NOI18N
+        launcherBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                launcherBtn1MouseClicked(evt);
+            }
+        });
 
         launcherBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
         launcherBtn2.setContentAreaFilled(false);
@@ -211,6 +204,24 @@ public class principal extends javax.swing.JFrame {
 
         FondoP.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 1550, 170));
 
+        cuerpoPrincipal.setBackground(new java.awt.Color(10, 38, 72));
+        cuerpoPrincipal.setMaximumSize(new java.awt.Dimension(1540, 850));
+        cuerpoPrincipal.setMinimumSize(new java.awt.Dimension(1540, 850));
+        cuerpoPrincipal.setPreferredSize(new java.awt.Dimension(1540, 850));
+
+        javax.swing.GroupLayout cuerpoPrincipalLayout = new javax.swing.GroupLayout(cuerpoPrincipal);
+        cuerpoPrincipal.setLayout(cuerpoPrincipalLayout);
+        cuerpoPrincipalLayout.setHorizontalGroup(
+            cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1540, Short.MAX_VALUE)
+        );
+        cuerpoPrincipalLayout.setVerticalGroup(
+            cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 850, Short.MAX_VALUE)
+        );
+
+        FondoP.add(cuerpoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
+
         FondoJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoBase.png"))); // NOI18N
         FondoJL.setText("jLabel1");
         FondoJL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -223,7 +234,8 @@ public class principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(FondoP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(FondoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,21 +246,22 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void launcherBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launcherBtn0ActionPerformed
-        // Esta acción lleva a la página Home
+        // Esta acción lleva a la Vista Home
+        Utility.showPanel(cuerpoPrincipal, vistaHome);
+        vistaHome.mostrarHome();
 
-        VistaHomeJP p1 = new VistaHomeJP();
-        ShowPanel(p1);
     }//GEN-LAST:event_launcherBtn0ActionPerformed
 
-    // Abrir panel cuerpo
-    private void ShowPanel(JPanel p) {
+    // menu vista Game
+    private void launcherBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn1MouseClicked
+        launcherGame(1);
 
-        p.setSize(1540, 850);
-        p.setLocation(0, 0);
-        cuerpo.removeAll();
-        cuerpo.add(p, BorderLayout.CENTER);
-        cuerpo.revalidate();
-        cuerpo.repaint();
+    }//GEN-LAST:event_launcherBtn1MouseClicked
+
+    public void launcherGame(int game) {
+        VistaGame vistaGame = new VistaGame();
+        utility.showPanel(cuerpoPrincipal, vistaGame);
+
     }
 
     /**
@@ -277,6 +290,7 @@ public class principal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -291,7 +305,7 @@ public class principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FondoJL;
     public static javax.swing.JPanel FondoP;
-    private javax.swing.JPanel cuerpo;
+    private javax.swing.JPanel cuerpoPrincipal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton launcherBtn0;
     private javax.swing.JButton launcherBtn1;

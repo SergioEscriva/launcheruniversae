@@ -11,66 +11,57 @@ import utilidades.Utility;
  *
  * @author sergio
  */
-public class VistaGameJP extends javax.swing.JPanel {
-String imagenPath; 
+public class VistaGame extends javax.swing.JPanel {
+
+    String imagenPath;
+
     // int x = 0;
     /**
      * Creates new form VistaGameJP2
      */
-    public VistaGameJP() {
+    public VistaGame() {
         initComponents();
-        
-        
-        int botonHome = 5;
-        
-        
-        switch (botonHome){
+
+        selectorGame(1);
+
+    }
+
+    // Selecciona el Preview Game
+    public void selectorGame(int botonHome) {
+        switch (botonHome) {
             case 1:
-               imagenPath = "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor";
-             break;
-             case 2:
-               imagenPath = "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque";
-             break;
-             case 3:
-               imagenPath = "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS";
-             break;
-             case 4:
-               imagenPath = "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia";
-             break;
-             case 5:
-               imagenPath = "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion";
-             break;
-             case 6:
-               imagenPath = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero";
-             break;
-             
-            
-        
+                imagenPath = "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor";
+                break;
+            case 2:
+                imagenPath = "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque";
+                break;
+            case 3:
+                imagenPath = "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS";
+                break;
+            case 4:
+                imagenPath = "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia";
+                break;
+            case 5:
+                imagenPath = "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion";
+                break;
+            case 6:
+                imagenPath = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero";
+                break;
+
         }
         ImageIcon image = new ImageIcon(imagenPath + "0.png");
-            imagenPrincipal.setIcon(image);
-        
+        imagenPrincipal.setIcon(image);
         String imagenFondoImg = "src/imagenes/interfazGame/fondoImagen.png";
-
-        
 
         Utility utilidades = new Utility();
         imagenFondo.setSize(1050, 430);
-
         utilidades.SetImageLabel(imagenFondo, imagenFondoImg);
-
         this.repaint();
-        
-        
+
         //Inicializar bolitas
         colocarBolitas();
         colocarBolitaLlena();
-        
-        
-    
-        
-        
-        
+
     }
 
     /**
@@ -184,6 +175,11 @@ String imagenPath;
         cuerpoGame.add(BolitasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 320, 50));
 
         ComenzarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Comenzar.png"))); // NOI18N
+        ComenzarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ComenzarBtnMouseClicked(evt);
+            }
+        });
         cuerpoGame.add(ComenzarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 766, 260, 50));
 
         descripciónPanel.setBackground(new java.awt.Color(10, 38, 72));
@@ -295,52 +291,52 @@ String imagenPath;
         colocarBolitaLlena();
     }//GEN-LAST:event_flechaIzquierdaMouseClicked
 
+    private void ComenzarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComenzarBtnMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_ComenzarBtnMouseClicked
+
     //Método para bolitas llenas
-    public void colocarBolitaLlena(){
+    public void colocarBolitaLlena() {
         colocarBolitas();
-         String imagenBolitaLlena = "src/imagenes/interfazGame/PuntoCarruselFilled.png";
+        String imagenBolitaLlena = "src/imagenes/interfazGame/PuntoCarruselFilled.png";
         ImageIcon image2 = new ImageIcon(imagenBolitaLlena);
-        
-      int x = Integer.parseInt(imagenPrincipal.getText());
-      
-      switch (x){
-          case 0: 
-              bolita1.setIcon(image2);
-              break;
-          case 1: 
-              bolita2.setIcon(image2);
-              break;
-          case 2: 
-              bolita3.setIcon(image2);
-              break;
-          case 3: 
-              bolita4.setIcon(image2);
-              break;
-          case 4: 
-              bolita5.setIcon(image2);
-              break;
-         
-          
-          
-          
-      }
+
+        int x = Integer.parseInt(imagenPrincipal.getText());
+
+        switch (x) {
+            case 0:
+                bolita1.setIcon(image2);
+                break;
+            case 1:
+                bolita2.setIcon(image2);
+                break;
+            case 2:
+                bolita3.setIcon(image2);
+                break;
+            case 3:
+                bolita4.setIcon(image2);
+                break;
+            case 4:
+                bolita5.setIcon(image2);
+                break;
+
+        }
     }
-      
-      //Método para bolitas vacías
-      
-     public void colocarBolitas(){
-      String imagenBolitaVacia = "src/imagenes/interfazGame/PuntoCarruselEmpty.png";
-       
-        
+
+    //Método para bolitas vacías
+    public void colocarBolitas() {
+        String imagenBolitaVacia = "src/imagenes/interfazGame/PuntoCarruselEmpty.png";
+
         ImageIcon image = new ImageIcon(imagenBolitaVacia);
         bolita1.setIcon(image);
         bolita2.setIcon(image);
         bolita3.setIcon(image);
         bolita4.setIcon(image);
         bolita5.setIcon(image);
-        
+
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BolitasPanel;
     private javax.swing.JLabel ComenzarBtn;

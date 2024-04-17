@@ -4,12 +4,12 @@ package utilidades;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
-
+import java.awt.BorderLayout;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -25,6 +25,17 @@ public class Utility {
         labelName.setIcon(icon);
 
         return labelName;
+
+    }
+
+    // Abrir panel cuerpo
+    public static void showPanel(JPanel antiguo, JPanel nuevo) {
+        nuevo.setSize(1540, 850);
+        nuevo.setLocation(0, 0);
+        antiguo.removeAll();
+        antiguo.add(nuevo, BorderLayout.CENTER);
+        antiguo.revalidate();
+        antiguo.repaint();
 
     }
 

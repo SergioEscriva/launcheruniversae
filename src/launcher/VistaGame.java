@@ -4,7 +4,12 @@
  */
 package launcher;
 
+import java.net.URISyntaxException;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import model.Game;
+import org.json.JSONException;
+import utilidades.LectorJSON;
 import utilidades.Utility;
 
 /**
@@ -14,12 +19,13 @@ import utilidades.Utility;
 public class VistaGame extends javax.swing.JPanel {
 
     String imagenPath;
+    LectorJSON lectorJSON = new LectorJSON();
 
     // int x = 0;
     /**
      * Creates new form VistaGameJP2
      */
-    public VistaGame() {
+    public VistaGame() throws JSONException, URISyntaxException {
         initComponents();
 
         selectorGame(1);
@@ -27,7 +33,7 @@ public class VistaGame extends javax.swing.JPanel {
     }
 
     // Selecciona el Preview Game
-    public void selectorGame(int botonHome) {
+    public void selectorGame(int botonHome) throws JSONException, URISyntaxException {
         switch (botonHome) {
             case 1:
                 imagenPath = "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor";
@@ -61,7 +67,7 @@ public class VistaGame extends javax.swing.JPanel {
         //Inicializar bolitas
         colocarBolitas();
         colocarBolitaLlena();
-
+        colocarTexto(botonHome - 1);
     }
 
     /**
@@ -86,11 +92,11 @@ public class VistaGame extends javax.swing.JPanel {
         bolita5 = new javax.swing.JLabel();
         ComenzarBtn = new javax.swing.JLabel();
         descripciónPanel = new javax.swing.JPanel();
+        jScrollTexto = new javax.swing.JScrollPane();
+        jTextTexto = new javax.swing.JTextArea();
         barraJL = new javax.swing.JLabel();
         jScrollTitulo = new javax.swing.JScrollPane();
         jTTitulo = new javax.swing.JTextArea();
-        jScrollTexto = new javax.swing.JScrollPane();
-        jTextTexto = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(10, 38, 72));
         setMaximumSize(new java.awt.Dimension(1540, 850));
@@ -183,8 +189,25 @@ public class VistaGame extends javax.swing.JPanel {
         cuerpoGame.add(ComenzarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 766, 260, 50));
 
         descripciónPanel.setBackground(new java.awt.Color(10, 38, 72));
+        descripciónPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollTexto.setBorder(null);
+
+        jTextTexto.setEditable(false);
+        jTextTexto.setBackground(new java.awt.Color(10, 38, 72));
+        jTextTexto.setColumns(20);
+        jTextTexto.setFont(new java.awt.Font("Raleway", 0, 14)); // NOI18N
+        jTextTexto.setForeground(new java.awt.Color(255, 255, 255));
+        jTextTexto.setLineWrap(true);
+        jTextTexto.setRows(5);
+        jTextTexto.setText("Texto de prueba");
+        jTextTexto.setBorder(null);
+        jScrollTexto.setViewportView(jTextTexto);
+
+        descripciónPanel.add(jScrollTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 920, 210));
 
         barraJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Barrita aislada descripción.png"))); // NOI18N
+        descripciónPanel.add(barraJL, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 7, -1));
 
         jScrollTitulo.setBackground(new java.awt.Color(10, 38, 72));
         jScrollTitulo.setBorder(null);
@@ -201,44 +224,9 @@ public class VistaGame extends javax.swing.JPanel {
         jTTitulo.setBorder(null);
         jScrollTitulo.setViewportView(jTTitulo);
 
-        jScrollTexto.setBorder(null);
+        descripciónPanel.add(jScrollTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 1076, 20));
 
-        jTextTexto.setEditable(false);
-        jTextTexto.setBackground(new java.awt.Color(10, 38, 72));
-        jTextTexto.setColumns(20);
-        jTextTexto.setFont(new java.awt.Font("Raleway", 0, 12)); // NOI18N
-        jTextTexto.setForeground(new java.awt.Color(255, 255, 255));
-        jTextTexto.setRows(5);
-        jTextTexto.setText("Texto de prueba");
-        jTextTexto.setBorder(null);
-        jScrollTexto.setViewportView(jTextTexto);
-
-        javax.swing.GroupLayout descripciónPanelLayout = new javax.swing.GroupLayout(descripciónPanel);
-        descripciónPanel.setLayout(descripciónPanelLayout);
-        descripciónPanelLayout.setHorizontalGroup(
-            descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(descripciónPanelLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollTexto)
-                    .addGroup(descripciónPanelLayout.createSequentialGroup()
-                        .addComponent(barraJL, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        descripciónPanelLayout.setVerticalGroup(
-            descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(descripciónPanelLayout.createSequentialGroup()
-                .addGroup(descripciónPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(barraJL))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
-                .addComponent(jScrollTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        cuerpoGame.add(descripciónPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 730, 250));
+        cuerpoGame.add(descripciónPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 910, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -334,6 +322,17 @@ public class VistaGame extends javax.swing.JPanel {
         bolita3.setIcon(image);
         bolita4.setIcon(image);
         bolita5.setIcon(image);
+
+    }
+
+    public void colocarTexto(int botonHome) throws JSONException {
+        ArrayList<Game> games = new ArrayList<>();
+
+        games = lectorJSON.jsonArray();
+        String gameTitulo = games.get(botonHome).getTitulo();
+        String gameDescripcion = games.get(botonHome).getDescripcion();
+        jTTitulo.setText(gameTitulo);
+        jTextTexto.setText(gameDescripcion);
 
     }
 

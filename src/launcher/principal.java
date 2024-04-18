@@ -4,6 +4,10 @@
  */
 package launcher;
 
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.JSONException;
 import utilidades.Utility;
 
 /**
@@ -12,13 +16,17 @@ import utilidades.Utility;
  */
 public class principal extends javax.swing.JFrame {
 
-    VistaHome vistaHome = new VistaHome();
-    Utility utility = new Utility();
+    VistaHome vistaHome;
+    VistaGame vistaGame;
+    Utility utility;
 
     /**
      * Creates new form principal
      */
-    public principal() {
+    public principal() throws JSONException, URISyntaxException {
+        this.utility = new Utility();
+        this.vistaHome = new VistaHome();
+        this.vistaGame = new VistaGame();
         initComponents();
         utility.showPanel(cuerpoPrincipal, vistaHome);
 
@@ -248,7 +256,13 @@ public class principal extends javax.swing.JFrame {
     private void launcherBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launcherBtn0ActionPerformed
         // Esta acción lleva a la Vista Home
         Utility.showPanel(cuerpoPrincipal, vistaHome);
-        vistaHome.mostrarHome();
+        try {
+            vistaHome.mostrarHome(0);
+        } catch (JSONException ex) {
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_launcherBtn0ActionPerformed
 
@@ -259,7 +273,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_launcherBtn1MouseClicked
 
     public void launcherGame(int game) {
-        VistaGame vistaGame = new VistaGame();
+
         utility.showPanel(cuerpoPrincipal, vistaGame);
 
     }
@@ -296,7 +310,13 @@ public class principal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new principal().setVisible(true);
+                try {
+                    new principal().setVisible(true);
+                } catch (JSONException ex) {
+                    Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (URISyntaxException ex) {
+                    Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
 
         });

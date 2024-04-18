@@ -4,6 +4,11 @@
  */
 package launcher;
 
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.Icon;
+import org.json.JSONException;
 import utilidades.Utility;
 
 /**
@@ -12,14 +17,30 @@ import utilidades.Utility;
  */
 public class VistaHome extends javax.swing.JPanel {
 
+    private VistaGame vistaGame;
+    private Icon imagenPrueba;
+    private String imagenPath;
+    private String direccion;
+    private String direccion2;
+    private String enlace;
+
     /**
      * Creates new form VistaHomeJP
      */
-    public VistaHome() {
-        initComponents();
+    public VistaHome() throws JSONException, URISyntaxException {
+        this.vistaGame = new VistaGame();
+        direccion = "/imagenes/fondoUniversae.png";
+        direccion2 = "/imagenes/fondoUniversae.png";
 
+        initComponents();
     }
 
+    /*
+    public void llamada() {
+        direccion = "/imagenes/Rescate.png";
+        imagenPrueba = new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate.png"));
+    }
+     */
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,10 +74,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         RescateBtn1.setBackground(new java.awt.Color(0, 0, 0));
-        RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Embarque.png"))); // NOI18N
+        RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
         RescateBtn1.setContentAreaFilled(false);
-        RescateBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Embarque.png"))); // NOI18N
-        RescateBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Embarque2.png"))); // NOI18N
+        RescateBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        RescateBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
         RescateBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtn1MouseClicked(evt);
@@ -65,10 +86,11 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 400, 310));
 
         RescateBtn.setBackground(new java.awt.Color(0, 0, 0));
-        RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate.png"))); // NOI18N
+        RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion))
+        );
         RescateBtn.setContentAreaFilled(false);
-        RescateBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate.png"))); // NOI18N
-        RescateBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate2.png"))); // NOI18N
+        RescateBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        RescateBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
         RescateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtnMouseClicked(evt);
@@ -77,10 +99,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
 
         TipologíaBtn.setBackground(new java.awt.Color(182, 225, 255));
-        TipologíaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Tipología.png"))); // NOI18N
+        TipologíaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
         TipologíaBtn.setContentAreaFilled(false);
-        TipologíaBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Tipología.png"))); // NOI18N
-        TipologíaBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Tipologia2.png"))); // NOI18N
+        TipologíaBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        TipologíaBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
         TipologíaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TipologíaBtnMouseClicked(evt);
@@ -89,10 +111,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(TipologíaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
 
         ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
-        ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Protocolo.png"))); // NOI18N
+        ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
         ProtocolBtn.setContentAreaFilled(false);
-        ProtocolBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Protocolo.png"))); // NOI18N
-        ProtocolBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Protocolo2.png"))); // NOI18N
+        ProtocolBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        ProtocolBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
         ProtocolBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProtocolBtnMouseClicked(evt);
@@ -101,10 +123,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 410, 320));
 
         ManiobrasBtn.setBackground(new java.awt.Color(182, 225, 255));
-        ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Maniobras.png"))); // NOI18N
+        ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
         ManiobrasBtn.setContentAreaFilled(false);
-        ManiobrasBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Maniobras.png"))); // NOI18N
-        ManiobrasBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Maniobras2.png"))); // NOI18N
+        ManiobrasBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        ManiobrasBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
         ManiobrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManiobrasBtnMouseClicked(evt);
@@ -113,10 +135,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 400, 320));
 
         SeñalizaciónBtn.setBackground(new java.awt.Color(182, 225, 255));
-        SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Señalizaciónj.png"))); // NOI18N
+        SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
         SeñalizaciónBtn.setContentAreaFilled(false);
-        SeñalizaciónBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Señalizaciónj.png"))); // NOI18N
-        SeñalizaciónBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Señalizacion2.png"))); // NOI18N
+        SeñalizaciónBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        SeñalizaciónBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
         SeñalizaciónBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SeñalizaciónBtnMouseClicked(evt);
@@ -163,40 +185,141 @@ public class VistaHome extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RescateBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtnMouseClicked
-        launcherGame(1);
+        try {
+            launcherGame(1);
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_RescateBtnMouseClicked
 
     private void RescateBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtn1MouseClicked
-        launcherGame(2);
+        try {
+            launcherGame(2);
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_RescateBtn1MouseClicked
 
     private void TipologíaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TipologíaBtnMouseClicked
-        launcherGame(3);
+        try {
+            launcherGame(3);
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_TipologíaBtnMouseClicked
 
     private void ProtocolBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProtocolBtnMouseClicked
-        launcherGame(4);
+        try {
+            launcherGame(4);
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_ProtocolBtnMouseClicked
 
     private void ManiobrasBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManiobrasBtnMouseClicked
-        launcherGame(5);
+        try {
+            launcherGame(5);
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_ManiobrasBtnMouseClicked
 
     private void SeñalizaciónBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SeñalizaciónBtnMouseClicked
-        launcherGame(6);
+        try {
+            launcherGame(6);
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_SeñalizaciónBtnMouseClicked
 
-    public void launcherGame(int game) {
-        VistaGame vistaGame = new VistaGame();
+    public void launcherGame(int game) throws JSONException, URISyntaxException {
+
         vistaGame.selectorGame(game);
         vistaHome.setVisible(false);
         Utility.showPanel(transaparente, vistaGame);
 
     }
 
-    public void mostrarHome() {
+    public void mostrarHome(int botonEscudo) throws JSONException, URISyntaxException {
         vistaHome.setVisible(true);
+        selectorHome(botonEscudo);
+
+    }
+
+    public void selectorHome(int botonEscudo) throws JSONException, URISyntaxException {
+        switch (botonEscudo) {
+            case 0:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 1:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 2:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 3:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 4:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 5:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 6:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 7:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 8:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 9:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 10:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 11:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 12:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+            case 13:
+                direccion = "/imagenes/fondoUniversae.png";
+                direccion2 = "/imagenes/fondoUniversae.png";
+                break;
+        }
+
+        this.repaint();
 
     }
 

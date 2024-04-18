@@ -7,7 +7,7 @@ package launcher;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
-import model.Game;
+import model.RutaHome;
 import org.json.JSONException;
 import utilidades.LectorJSON;
 import utilidades.Utility;
@@ -32,7 +32,7 @@ public class VistaGame extends javax.swing.JPanel {
 
     }
 
-    // Selecciona el Preview Game
+    // Selecciona el Preview RutaHome
     public void selectorGame(int botonHome) throws JSONException, URISyntaxException {
         switch (botonHome) {
             case 1:
@@ -326,14 +326,13 @@ public class VistaGame extends javax.swing.JPanel {
     }
 
     public void colocarTexto(int botonHome) throws JSONException {
-        ArrayList<Game> games = new ArrayList<>();
+        ArrayList<RutaHome> games = new ArrayList<>();
 
-        games = lectorJSON.jsonArray();
-        String gameTitulo = games.get(botonHome).getTitulo();
-        String gameDescripcion = games.get(botonHome).getDescripcion();
-        jTTitulo.setText(gameTitulo);
-        jTextTexto.setText(gameDescripcion);
-
+        //games = lectorJSON.jsonArray();
+        //String gameTitulo = games.get(botonHome).getTitulo();
+        //String gameDescripcion = games.get(botonHome).getDescripcion();
+        //jTTitulo.setText(gameTitulo);
+        //jTextTexto.setText(gameDescripcion);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

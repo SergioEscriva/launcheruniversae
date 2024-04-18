@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import model.Game;
+import model.RutaHome;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,7 +20,7 @@ public class LectorJSON {
     //  jsonArray();
     //}
     //Leer array
-    public ArrayList<Game> jsonArray() throws JSONException {
+    public ArrayList<RutaHome> jsonArray() throws JSONException {
         LectorJSON lector = new LectorJSON();
 
         String fichero = lector.leerFichero();
@@ -30,7 +30,7 @@ public class LectorJSON {
         JSONArray arregloJson = new JSONArray(cadenaJson);
 
         // Nota: creamos la lista para ejemplos ilustrativos, no es necesaria
-        ArrayList<Game> games = new ArrayList<>();
+        ArrayList<RutaHome> games = new ArrayList<>();
         // Iterar 
         for (int indice = 0; indice < arregloJson.length(); indice++) {
             // Obtener objeto a través del índice
@@ -47,12 +47,11 @@ public class LectorJSON {
 
             // Luego de eso podemos crear la clase y obtener los beneficios
             // de la POO o usar los datos como nos plazca
-            Game game = new Game(titulo, descripcion, grado, asignatura, unidad, duracion, dificultad);
-
+            //RutaHome game = new RutaHome(titulo, descripcion, grado, asignatura, unidad, duracion, dificultad);
             // Podemos hacer lo que sea con el objeto
             //game.info();
             // Agregar a la lista, solo para ilustrar
-            games.add(game);
+            //games.add(game);
         }
         //System.out.println(games.get(1).getDescripcion());
 

@@ -5,81 +5,82 @@
 package launcher;
 
 import java.net.URISyntaxException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
 import javax.swing.Icon;
+import model.RutaHome;
 import org.json.JSONException;
+import utilidades.LectorRutaHome;
 import utilidades.Utility;
 
 /**
  *
- * @author Sergio SM
+ * @author Sergios
  */
 public class VistaHome extends javax.swing.JPanel {
 
-    private VistaGame vistaGame;
     private Icon imagenPrueba;
     private String imagenPath;
     String direccion000, direccion001, direccion002, direccion003, direccion004, direccion005;
     private String direccion000G, direccion001G, direccion002G, direccion003G, direccion004G, direccion005G;
     private String enlace;
     private String imagen;
-    private String[] imagenes;
+    private ArrayList<String> imagenesHome;
+    private ArrayList<String> imagenesHome2;
+
+    LectorRutaHome rutasHome = new LectorRutaHome();
+    VistaGame vistaGame = new VistaGame();
 
     /**
      * Creates new form VistaHomeJP
      */
     public VistaHome() throws JSONException, URISyntaxException {
-        this.vistaGame = new VistaGame();
-        //String[] imagenes = {};
-        llamada();
-        //this.imagenes = imagenes;
-        String[] imagenes = new String[]{"/imagenes/fondoUniversae.png"};
+
+        // Inicia los iconos Home
+        iconosHome();
+
+        // Inicia componentes
         initComponents();
+
+        // Inicia botones
         botones();
-        //RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        // this.imagenes = imagenes;
-        //System.out.println("Hola3 " + direccion001);
     }
 
-    public void llamada() {
+    public void iconosHome() throws JSONException {
+        // Recuperamos datos del Json
+        ArrayList<RutaHome> rutas = rutasHome.jsonArray();
 
-        String[] direccion00 = new String[6];
+        // Creamos Listas para guardar las rutas de las imágenes
+        ArrayList<String> rutasImagenesHome = new ArrayList();
+        ArrayList<String> rutasImagenesHome2 = new ArrayList();
+        String rutaImagenHome = "";
+        String rutaImagenHome2 = "";
 
-// Llenar el array con los nombres de los directorios
-        for (int i = 0; i < 6; i++) {
-            direccion00[i] = "direccion00" + (i);
+        // Iteramos el Json y añadimos las rutas de las imagenes a una lista
+        for (int x = 0; x <= 0; x++) {
+
+            //JSONArray rutasArray = imagen.getRutaImagenesHome();
+            String gradoNumero = rutas.get(x).getNombre();
+            for (int i = 0; i <= 5; i++) {
+
+                rutaImagenHome = rutas.get(x).getRutaImagenesHome().getString(i);
+                rutaImagenHome2 = rutas.get(x).getRutaImagenesHomeGrandes().getString(i);
+                rutasImagenesHome.add(rutaImagenHome);
+                rutasImagenesHome2.add(rutaImagenHome2);
+            }
         }
-
-        // Ahora puedes acceder a los nombres de los directorios a través de sus índices
-        for (int i = 0; i < 6; i++) {
-            String directorio = direccion00[i];
-            // Puedes usar el nombre del directorio (directorio) según lo necesites
-            direccion00[i] = "/imagenes/fondoUniversae.png";
-            //imagen = "/imagenes/fondoUniversae.png";
-            //imagen = "direccion00" + i + " = \"/imagenes/fondoUniversae.png\"";
-            System.out.println(imagen);
-        }
-
-        //imagenes[0] = "src/imagenes/fondoUniversae.png";    
-        // String[] imagenes = {"/imagenes/fondoUniversae.png", "Hola"};
-        // direccion000 = imagenes[0];
-        for (int i = 1; i <= 5; i++) {
-            //String dire = direccion00{(i).toString()};
-            // System.out.println(dire + " Hola2 " + direccion001);
-        }
+        imagenesHome = rutasImagenesHome;
+        imagenesHome2 = rutasImagenesHome2;
 
     }
 
     public void botones() {
-        String[] imagenes = new String[]{"/imagenes/fondoUniversae.png"};
 
         RescateBtn1.setBackground(new java.awt.Color(0, 0, 0));
-        RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0]))
+        RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(0)))
         );
         RescateBtn1.setContentAreaFilled(false);
-        RescateBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        RescateBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        RescateBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(0))));
+        RescateBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome2.get(0))));
         RescateBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,11 +91,11 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 400, 310));
 
         RescateBtn.setBackground(new java.awt.Color(0, 0, 0));
-        RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0]))
+        RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(1)))
         );
         RescateBtn.setContentAreaFilled(false);
-        RescateBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        RescateBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        RescateBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(1))));
+        RescateBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome2.get(1))));
         RescateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -104,25 +105,25 @@ public class VistaHome extends javax.swing.JPanel {
         });
         vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
 
-        TipologíaBtn.setBackground(new java.awt.Color(182, 225, 255));
-        TipologíaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        TipologíaBtn.setContentAreaFilled(false);
-        TipologíaBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        TipologíaBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        TipologíaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        TipologiaBtn.setBackground(new java.awt.Color(182, 225, 255));
+        TipologiaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(2))));
+        TipologiaBtn.setContentAreaFilled(false);
+        TipologiaBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(2))));
+        TipologiaBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome2.get(2))));
+        TipologiaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TipologíaBtnMouseClicked(evt);
+                TipologiaBtnMouseClicked(evt);
             }
 
         });
-        vistaHome.add(TipologíaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
+        vistaHome.add(TipologiaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
 
         ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
-        ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(3))));
         ProtocolBtn.setContentAreaFilled(false);
-        ProtocolBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        ProtocolBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        ProtocolBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(3))));
+        ProtocolBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome2.get(3))));
         ProtocolBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -133,10 +134,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 410, 320));
 
         ManiobrasBtn.setBackground(new java.awt.Color(182, 225, 255));
-        ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(4))));
         ManiobrasBtn.setContentAreaFilled(false);
-        ManiobrasBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        ManiobrasBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        ManiobrasBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(4))));
+        ManiobrasBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome2.get(4))));
         ManiobrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -147,10 +148,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 400, 320));
 
         SeñalizaciónBtn.setBackground(new java.awt.Color(182, 225, 255));
-        SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(5))));
         SeñalizaciónBtn.setContentAreaFilled(false);
-        SeñalizaciónBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
-        SeñalizaciónBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenes[0])));
+        SeñalizaciónBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(5))));
+        SeñalizaciónBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome2.get(5))));
         SeñalizaciónBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,7 +175,7 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome = new javax.swing.JPanel();
         RescateBtn1 = new javax.swing.JButton();
         RescateBtn = new javax.swing.JButton();
-        TipologíaBtn = new javax.swing.JButton();
+        TipologiaBtn = new javax.swing.JButton();
         ProtocolBtn = new javax.swing.JButton();
         ManiobrasBtn = new javax.swing.JButton();
         SeñalizaciónBtn = new javax.swing.JButton();
@@ -212,14 +213,19 @@ public class VistaHome extends javax.swing.JPanel {
         });
         vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
 
-        TipologíaBtn.setBackground(new java.awt.Color(182, 225, 255));
-        TipologíaBtn.setContentAreaFilled(false);
-        TipologíaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        TipologiaBtn.setBackground(new java.awt.Color(182, 225, 255));
+        TipologiaBtn.setContentAreaFilled(false);
+        TipologiaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TipologíaBtnMouseClicked(evt);
+                TipologiaBtnMouseClicked(evt);
             }
         });
-        vistaHome.add(TipologíaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
+        TipologiaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TipologiaBtnActionPerformed(evt);
+            }
+        });
+        vistaHome.add(TipologiaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
 
         ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
         ProtocolBtn.setContentAreaFilled(false);
@@ -287,64 +293,74 @@ public class VistaHome extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RescateBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtn1MouseClicked
+
         try {
             launcherGame(2);
         } catch (JSONException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+
     }//GEN-LAST:event_RescateBtn1MouseClicked
 
     private void ProtocolBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProtocolBtnMouseClicked
+
         try {
             launcherGame(4);
         } catch (JSONException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+
     }//GEN-LAST:event_ProtocolBtnMouseClicked
 
     private void ManiobrasBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManiobrasBtnMouseClicked
+
         try {
             launcherGame(5);
         } catch (JSONException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+
     }//GEN-LAST:event_ManiobrasBtnMouseClicked
 
     private void SeñalizaciónBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SeñalizaciónBtnMouseClicked
         try {
             launcherGame(6);
         } catch (JSONException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_SeñalizaciónBtnMouseClicked
 
-    private void TipologíaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TipologíaBtnMouseClicked
+    private void TipologiaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TipologiaBtnMouseClicked
         try {
             launcherGame(3);
         } catch (JSONException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_TipologíaBtnMouseClicked
+    }//GEN-LAST:event_TipologiaBtnMouseClicked
 
     private void RescateBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtnMouseClicked
         try {
             launcherGame(1);
         } catch (JSONException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
-            Logger.getLogger(VistaHome.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_RescateBtnMouseClicked
+
+    private void TipologiaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TipologiaBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TipologiaBtnActionPerformed
 
     public void launcherGame(int game) throws JSONException, URISyntaxException {
 
@@ -431,7 +447,7 @@ public class VistaHome extends javax.swing.JPanel {
     private javax.swing.JButton RescateBtn;
     private javax.swing.JButton RescateBtn1;
     private javax.swing.JButton SeñalizaciónBtn;
-    private javax.swing.JButton TipologíaBtn;
+    private javax.swing.JButton TipologiaBtn;
     private javax.swing.JPanel transaparente;
     private javax.swing.JPanel vistaHome;
     // End of variables declaration//GEN-END:variables

@@ -1,0 +1,134 @@
+[
+{"Nombre":"Grado1",
+    "ImagenesHome": ["Img0","Img1", "Img2", "Img3", "Img4", "Img5"],
+    "RutaImagenesHome":["/imagenes/Rescate.png","/imagenes/Embarque.png",
+                        "/imagenes/Tipologia.png","/imagenes/Protocolo.png",
+                        "/imagenes/Maniobras.png","/imagenes/Señalizacionj.png"],
+    "ImagenesHomeGrandes":["Img0","Img1", "Img2", "Img3", "Img4", "Img5"],
+    "RutaImagenesHomeGrandes":["/imagenes/Rescate2.png","/imagenes/Embarque2.png",
+                                "/imagenes/Tipologia2.png","/imagenes/Protocolo2.png",
+                                "/imagenes/Maniobras2.png","/imagenes/Señalizacion2.png"],
+        "Simulador1": {
+            "numeroSimulador":"011",
+            "Titulo":"Rescate en ascensor",
+            "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
+            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor0.png",
+                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor1.png", 
+                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor2.png",
+                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor3.png",
+                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor4.png"],
+            "Descripcion":"Descripcion prueba 1",
+            "Enlace": "Enlace prueba 1"
+        },
+        "Simulador2": {
+            "numeroSimulador":"012",
+            "Titulo":"Embarque y desembarque en helicoptero",
+            "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
+            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Embarque/Embarque0.png",
+                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque1.png", 
+                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque2.png",
+                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque3.png",
+                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque4.png"],
+            "Descripcion":"Descripcion prueba 2",
+            "Enlace": "Enlace prueba 2"
+        },
+        "Simulador3": {
+            "numeroSimulador":"013",
+            "Titulo":"Tipologia y caracteristicas de los EPIS",
+            "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
+            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/EPIS/EPIS0.png",
+                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS1.png", 
+                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS2.png",
+                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS3.png",
+                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS4.png"],
+            "Descripcion":"Descripcion prueba 3",
+            "Enlace": "Enlace prueba 3"
+        },
+        "Simulador4": {
+            "numeroSimulador":"014",
+            "Titulo":"Protocolo ante una hemorragia externa",
+            "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
+            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia0.png",
+                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia1.png", 
+                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia2.png",
+                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia3.png",
+                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia4.png"],
+            "Descripcion":"Descripcion prueba",
+            "Enlace": "Enlace prueba"
+        },
+        "Simulador5": {
+            "numeroSimulador":"015",
+            "Titulo":"Maniobras de extincion segun la instalacion",
+            "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
+            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Extincion/Extincion0.png",
+                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion1.png", 
+                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion2.png",
+                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion3.png",
+                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion4.png"],
+            "Descripcion":"Descripcion prueba 5",
+            "Enlace": "Enlace prueba 5"
+        },
+        "Simulador6": {
+            "numeroSimulador":"016",
+            "Titulo":"Señalizacion a helicoptero desde tierra",
+            "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
+            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png",
+                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero1.png", 
+                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero2.png",
+                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero3.png",
+                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero4.png"],
+            "Descripcion":"Descripcion prueba 6",
+            "Enlace": "Enlace prueba 6"
+        }
+
+},
+
+{"Nombre":"Grado2",
+    "ImagenesHome": ["Img0","Img1", "Img2", "Img3", "Img4", "Img5"],
+    "RutaImagenesHome":[],
+    "ImagenesHomeGrandes":["Img0","Img1", "Img2", "Img3", "Img4", "Img5"],
+    "RutaImagenesHomeGrandes":[],
+        "Simulador1": {
+            "numeroSimulador":"021",
+            "Titulo":"Prueba 1",
+            "Imagenes":["Img1", "Img2", "Img3"],
+            "Descripcion":"Descripcion prueba 1",
+            "Enlace": "Enlace prueba 1"
+        },
+        "Simulador2": {
+            "numeroSimulador":"022",
+            "Titulo":"Prueba 2",
+            "Imagenes":["Img1", "Img2", "Img3"],
+            "Descripcion":"Descripcion prueba 2",
+            "Enlace": "Enlace prueba 2"
+        },
+        "Simulador3": {
+            "numeroSimulador":"023",
+            "Titulo":"Prueba 3",
+            "Imagenes":["Img1", "Img2", "Img3"],
+            "Descripcion":"Descripcion prueba 3",
+            "Enlace": "Enlace prueba 3"
+        },
+        "Simulador4": {
+            "numeroSimulador":"024",
+            "Titulo":"Prueba 4",
+            "Imagenes":["Img1", "Img2", "Img3"],
+            "Descripcion":"Descripcion prueba",
+            "Enlace": "Enlace prueba"
+        },
+        "Simulador5": {
+            "numeroSimulador":"025",
+            "Titulo":"Prueba 5",
+            "Imagenes":["Img1", "Img2", "Img3"],
+            "Descripcion":"Descripcion prueba 5",
+            "Enlace": "Enlace prueba 5"
+        },
+        "Simulador6": {
+            "numeroSimulador":"026",
+            "Titulo":"Prueba 6",
+            "Imagenes":["Img1", "Img2", "Img3"],
+            "Descripcion":"Descripcion prueba 6",
+            "Enlace": "Enlace prueba 6"
+        }
+}
+]

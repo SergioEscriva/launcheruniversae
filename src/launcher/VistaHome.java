@@ -20,27 +20,50 @@ public class VistaHome extends javax.swing.JPanel {
     private VistaGame vistaGame;
     private Icon imagenPrueba;
     private String imagenPath;
-    private String direccion;
-    private String direccion2;
+    String direccion000, direccion001, direccion002, direccion003, direccion004, direccion005;
+    private String direccion000G, direccion001G, direccion002G, direccion003G, direccion004G, direccion005G;
     private String enlace;
+    //private String nuevadireccion;
+    private String[] imagenes;
+    
+   
 
     /**
      * Creates new form VistaHomeJP
      */
     public VistaHome() throws JSONException, URISyntaxException {
         this.vistaGame = new VistaGame();
-        direccion = "/imagenes/fondoUniversae.png";
-        direccion2 = "/imagenes/fondoUniversae.png";
-
-        initComponents();
+        //String[] imagenes = {};
+        llamada();
+        //this.imagenes = imagenes;
+        
+        
+        
+    //String[] imagenes = new String[] {"src/imagenes/fondoUniversae.png"};
+       
+    initComponents();
+    this.imagenes = imagenes;
+        //System.out.println("Hola3 " + direccion001);
     }
 
-    /*
+    
     public void llamada() {
-        direccion = "/imagenes/Rescate.png";
-        imagenPrueba = new javax.swing.ImageIcon(getClass().getResource("/imagenes/Rescate.png"));
+         
+     //imagenes[0] = "src/imagenes/fondoUniversae.png";    
+     String[] imagenes= {"/imagenes/fondoUniversae.png","Hola"}; 
+     direccion000 = imagenes[0];
+
+    for (int i = 1; i <= 5; i++) {
+        //String dire = direccion00{(i).toString()};
+       // System.out.println(dire + " Hola2 " + direccion001);
     }
-     */
+        
+           
+             
+        
+       
+    }
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,10 +97,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         RescateBtn1.setBackground(new java.awt.Color(0, 0, 0));
-        RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        RescateBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion000)));
         RescateBtn1.setContentAreaFilled(false);
-        RescateBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
-        RescateBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
+        RescateBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion001)));
+        RescateBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion001G)));
         RescateBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtn1MouseClicked(evt);
@@ -86,11 +109,11 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 400, 310));
 
         RescateBtn.setBackground(new java.awt.Color(0, 0, 0));
-        RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion))
+        RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion000))
         );
         RescateBtn.setContentAreaFilled(false);
-        RescateBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
-        RescateBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
+        RescateBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion000)));
+        RescateBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion000G)));
         RescateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtnMouseClicked(evt);
@@ -99,10 +122,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
 
         TipologíaBtn.setBackground(new java.awt.Color(182, 225, 255));
-        TipologíaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        TipologíaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion002)));
         TipologíaBtn.setContentAreaFilled(false);
-        TipologíaBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
-        TipologíaBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
+        TipologíaBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion002)));
+        TipologíaBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion002G)));
         TipologíaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TipologíaBtnMouseClicked(evt);
@@ -111,10 +134,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(TipologíaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
 
         ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
-        ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion003)));
         ProtocolBtn.setContentAreaFilled(false);
-        ProtocolBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
-        ProtocolBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
+        ProtocolBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion003)));
+        ProtocolBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion003G)));
         ProtocolBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProtocolBtnMouseClicked(evt);
@@ -123,10 +146,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 410, 320));
 
         ManiobrasBtn.setBackground(new java.awt.Color(182, 225, 255));
-        ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion004)));
         ManiobrasBtn.setContentAreaFilled(false);
-        ManiobrasBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
-        ManiobrasBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
+        ManiobrasBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion004)));
+        ManiobrasBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion004G)));
         ManiobrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManiobrasBtnMouseClicked(evt);
@@ -135,10 +158,10 @@ public class VistaHome extends javax.swing.JPanel {
         vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 400, 320));
 
         SeñalizaciónBtn.setBackground(new java.awt.Color(182, 225, 255));
-        SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
+        SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(direccion005)));
         SeñalizaciónBtn.setContentAreaFilled(false);
-        SeñalizaciónBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion)));
-        SeñalizaciónBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion2)));
+        SeñalizaciónBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource(direccion005)));
+        SeñalizaciónBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource(direccion005G)));
         SeñalizaciónBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SeñalizaciónBtnMouseClicked(evt);
@@ -255,10 +278,10 @@ public class VistaHome extends javax.swing.JPanel {
 
     public void mostrarHome(int botonEscudo) throws JSONException, URISyntaxException {
         vistaHome.setVisible(true);
-        selectorHome(botonEscudo);
+        //selectorHome(botonEscudo);
 
     }
-
+/*
     public void selectorHome(int botonEscudo) throws JSONException, URISyntaxException {
         switch (botonEscudo) {
             case 0:
@@ -322,7 +345,7 @@ public class VistaHome extends javax.swing.JPanel {
         this.repaint();
 
     }
-
+*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ManiobrasBtn;
     private javax.swing.JButton ProtocolBtn;

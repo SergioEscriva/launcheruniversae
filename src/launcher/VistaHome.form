@@ -83,14 +83,14 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion000))" type="code"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion001))" type="code"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion2))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion001G))" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -108,14 +108,14 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))&#xa;" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion000))&#xa;" type="code"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion000))" type="code"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion2))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion000G))" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -133,14 +133,14 @@
               <Color blue="ff" green="e1" red="b6" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion002))" type="code"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion002))" type="code"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion2))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion002G))" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -158,14 +158,14 @@
               <Color blue="ff" green="e1" red="b6" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion003))" type="code"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion003))" type="code"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion2))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion003G))" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -183,14 +183,14 @@
               <Color blue="ff" green="e1" red="b6" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion004))" type="code"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion004))" type="code"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion2))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion004G))" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -208,14 +208,14 @@
               <Color blue="ff" green="e1" red="b6" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion005))" type="code"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion005))" type="code"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion2))" type="code"/>
+              <Connection code="new javax.swing.ImageIcon(getClass().getResource(direccion005G))" type="code"/>
             </Property>
           </Properties>
           <Events>

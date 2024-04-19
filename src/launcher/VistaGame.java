@@ -27,12 +27,14 @@ public final class VistaGame extends javax.swing.JPanel {
      * Creates new form VistaGameJP2
      */
     public VistaGame() throws JSONException, URISyntaxException {
-        LectorRutaSimulador rutaSimuladorJson = new LectorRutaSimulador();
-        this.rutaSimuladorJson = rutaSimuladorJson;
 
-        iconosSimulador();
+        // coloca los iconos de los Simuladores
+        LectorRutaSimulador rutaSimuladorJson = new LectorRutaSimulador();
+        ArrayList<String> imagenesSimulador = rutaSimuladorJson.jsonArray();
+        this.imagenesSimulador = imagenesSimulador;
+
+        // Iniciamos Componentes
         initComponents();
-        selectorGame(1);
 
     }
 
@@ -40,10 +42,10 @@ public final class VistaGame extends javax.swing.JPanel {
     public void selectorGame(int botonHome) throws JSONException, URISyntaxException {
         switch (botonHome) {
             case 1:
-                imagenPath = imagenesSimulador.get(0);
+                imagenPath = imagenesSimulador.get(1);
                 break;
             case 2:
-                imagenPath = imagenesSimulador.get(1);
+                imagenPath = imagenesSimulador.get(0);
                 ;
                 break;
             case 3:

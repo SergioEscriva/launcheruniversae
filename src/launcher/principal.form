@@ -167,9 +167,6 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn1.png"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn1MouseClicked"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn2">
               <Properties>

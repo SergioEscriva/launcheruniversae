@@ -86,11 +86,6 @@ public class principal extends javax.swing.JFrame {
         launcherBtn1.setContentAreaFilled(false);
         launcherBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
         launcherBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn1.png"))); // NOI18N
-        launcherBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                launcherBtn1MouseClicked(evt);
-            }
-        });
 
         launcherBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
         launcherBtn2.setContentAreaFilled(false);
@@ -265,12 +260,6 @@ public class principal extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_launcherBtn0ActionPerformed
-
-    // menu vista Game
-    private void launcherBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn1MouseClicked
-        launcherGame(1);
-
-    }//GEN-LAST:event_launcherBtn1MouseClicked
 
     public void launcherGame(int game) {
 

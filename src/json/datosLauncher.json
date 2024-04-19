@@ -10,7 +10,7 @@
                                 "/imagenes/Maniobras2.png","/imagenes/Señalizacion2.png"],
         "Simulador1": {
             "numeroSimulador":"011",
-           "Titulo":"Embarque y desembarque en helicoptero",
+             "Titulo":"Rescate en ascensor",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Embarque/Embarque",
                "Descripcion":"Descripcion prueba 1",
@@ -18,7 +18,7 @@
         },
         "Simulador2": {
             "numeroSimulador":"012",
-             "Titulo":"Rescate en ascensor",
+            "Titulo":"Embarque y desembarque en helicoptero",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor",
             "Descripcion":"Descripcion prueba 2",

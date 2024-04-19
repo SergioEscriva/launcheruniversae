@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package launcher;
 
 import java.net.URISyntaxException;
@@ -11,10 +8,7 @@ import org.json.JSONException;
 import utilidades.LectorRutaHome;
 import utilidades.Utility;
 
-/**
- *
- * @author Sergios
- */
+
 public final class VistaHome extends javax.swing.JPanel {
 
     private ArrayList<String> imagenesHome;
@@ -362,81 +356,21 @@ public final class VistaHome extends javax.swing.JPanel {
 
         vistaGame.selectorGame(game);
         vistaHome.setVisible(false);
+        transaparente.setVisible(true);
         Utility.showPanel(transaparente, vistaGame);
 
     }
 
     public void mostrarHome(int botonEscudo) throws JSONException, URISyntaxException {
         vistaHome.setVisible(true);
-        //selectorHome(botonEscudo);
+
 
     }
-
-    /*
-    public void selectorHome(int botonEscudo) throws JSONException, URISyntaxException {
-        switch (botonEscudo) {
-            case 0:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 1:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 2:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 3:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 4:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 5:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 6:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 7:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 8:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 9:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 10:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 11:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 12:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-            case 13:
-                direccion = "/imagenes/fondoUniversae.png";
-                direccion2 = "/imagenes/fondoUniversae.png";
-                break;
-        }
-
-        this.repaint();
-
+    public void borrarTransparente(){
+        transaparente.setVisible(false);
     }
-     */
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ManiobrasBtn;
     private javax.swing.JButton ProtocolBtn;

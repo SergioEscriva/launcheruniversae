@@ -2,10 +2,7 @@ package model;
 
 import org.json.JSONArray;
 
-/**
- *
- * @author sergio
- */
+
 public class RutaHome {
 
     private JSONArray ImagenesHome, RutaImagenesHome, ImagenesHomeGrandes, RutaImagenesHomeGrandes;

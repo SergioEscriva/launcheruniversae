@@ -14,7 +14,7 @@ import utilidades.Utility;
  *
  * @author sergio
  */
-public class principal extends javax.swing.JFrame {
+public  class principal extends javax.swing.JFrame {
 
     VistaHome vistaHome;
     VistaGame vistaGame;
@@ -29,6 +29,7 @@ public class principal extends javax.swing.JFrame {
         this.vistaGame = new VistaGame();
         initComponents();
         utility.showPanel(cuerpoPrincipal, vistaHome);
+       
 
     }
 
@@ -250,7 +251,10 @@ public class principal extends javax.swing.JFrame {
 
     private void launcherBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launcherBtn0ActionPerformed
         // Esta acción lleva a la Vista Home
+        vistaHome.borrarTransparente();
         Utility.showPanel(cuerpoPrincipal, vistaHome);
+        
+        
         try {
             vistaHome.mostrarHome(0);
         } catch (JSONException ex) {

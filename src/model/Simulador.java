@@ -1,9 +1,6 @@
 package model;
 
-/**
- *
- * @author sergio
- */
+
 public class Simulador {
 
     private String numeroSimulador, Titulo, Descripcion, Enlace;

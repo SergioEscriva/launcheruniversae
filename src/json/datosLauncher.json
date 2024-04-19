@@ -1,27 +1,26 @@
 [
 {"Nombre":"Grado1",
     "ImagenesHome": ["Img0","Img1", "Img2", "Img3", "Img4", "Img5"],
-    "RutaImagenesHome":["/imagenes/Rescate.png","/imagenes/Embarque.png",
+    "RutaImagenesHome":["/imagenes/Embarque.png","/imagenes/Rescate.png",
                         "/imagenes/Tipologia.png","/imagenes/Protocolo.png",
                         "/imagenes/Maniobras.png","/imagenes/Señalizacionj.png"],
     "ImagenesHomeGrandes":["Img0","Img1", "Img2", "Img3", "Img4", "Img5"],
-    "RutaImagenesHomeGrandes":["/imagenes/Rescate2.png","/imagenes/Embarque2.png",
+    "RutaImagenesHomeGrandes":["/imagenes/Embarque2.png","/imagenes/Rescate2.png",
                                 "/imagenes/Tipologia2.png","/imagenes/Protocolo2.png",
                                 "/imagenes/Maniobras2.png","/imagenes/Señalizacion2.png"],
         "Simulador1": {
             "numeroSimulador":"011",
-            "Titulo":"Rescate en ascensor",
+           "Titulo":"Embarque y desembarque en helicoptero",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor",
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Embarque/Embarque",
                "Descripcion":"Descripcion prueba 1",
             "Enlace": "Enlace prueba 1"
         },
         "Simulador2": {
             "numeroSimulador":"012",
-            "Titulo":"Embarque y desembarque en helicoptero",
+             "Titulo":"Rescate en ascensor",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Embarque/Embarque",
-
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor",
             "Descripcion":"Descripcion prueba 2",
             "Enlace": "Enlace prueba 2"
         },

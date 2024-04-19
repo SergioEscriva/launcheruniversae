@@ -334,16 +334,6 @@ public final class VistaHome extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_SeñalizaciónBtnMouseClicked
 
-    private void TipologiaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TipologiaBtnMouseClicked
-        try {
-            launcherGame(3);
-        } catch (JSONException ex) {
-            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (URISyntaxException ex) {
-            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_TipologiaBtnMouseClicked
-
     private void RescateBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtnMouseClicked
         try {
             launcherGame(1);
@@ -357,6 +347,16 @@ public final class VistaHome extends javax.swing.JPanel {
     private void TipologiaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TipologiaBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TipologiaBtnActionPerformed
+
+    private void TipologiaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TipologiaBtnMouseClicked
+        try {
+            launcherGame(3);
+        } catch (JSONException ex) {
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            java.util.logging.Logger.getLogger(VistaHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_TipologiaBtnMouseClicked
 
     public void launcherGame(int game) throws JSONException, URISyntaxException {
 

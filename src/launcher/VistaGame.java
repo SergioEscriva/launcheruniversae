@@ -8,8 +8,10 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import model.RutaHome;
+import model.Simulador;
 import org.json.JSONException;
 import utilidades.LectorRutaSimulador;
+import utilidades.LectorTextoSimulador;
 import utilidades.Utility;
 
 /**
@@ -27,6 +29,7 @@ public final class VistaGame extends javax.swing.JPanel {
      * Creates new form VistaGameJP2
      */
     public VistaGame() throws JSONException, URISyntaxException {
+        
 
         // coloca los iconos de los Simuladores
         LectorRutaSimulador rutaSimuladorJson = new LectorRutaSimulador();
@@ -336,34 +339,26 @@ public final class VistaGame extends javax.swing.JPanel {
 
     }
 
-    public void iconosSimulador() throws JSONException {
-        // Recuperamos datos del Json
-        ArrayList<String> rutas = rutaSimuladorJson.jsonArray();
+    
 
-        // Creamos Listas para guardar las rutas de las imágenes
-        //ArrayList<String> rutasImagenesHome = new ArrayList();
-        //String rutaImagenHome = "";
-        // Iteramos el Json y añadimos las rutas de las imagenes a una lista
-        // for (int x = 0; x <= 6; x++) {
-        //JSONArray rutasArray = imagen.getRutaImagenesHome();
-        // String numeroSimulador = rutas.get(x).getNumeroSimulador();
-        //for (int i = 0; i <= 5; i++) {
-        //  rutaImagenHome = rutas.get(x).getRutaImagenes().getString(i);
-        // rutasImagenesHome.add(rutaImagenHome);
-        // }
-        // }
-        imagenesSimulador = rutas;
-
-    }
+    
 
     public void colocarTexto(int botonHome) throws JSONException {
-        ArrayList<RutaHome> games = new ArrayList<>();
+        LectorTextoSimulador simuladorJson = new LectorTextoSimulador();
+  
+        ArrayList<Simulador> games = new ArrayList<>();
+        
+        games = simuladorJson.jsonArray();
+        String gameTitulo = games.get(botonHome).getTitulo();
+        String gameDescripcion = games.get(botonHome).getDescripcion();
+        
+        jTTitulo.setText(gameTitulo);
+        jTextTexto.setText(gameDescripcion);
+        
+        
 
-        //games = lectorJSON.jsonArray();
-        //String gameTitulo = games.get(botonHome).getTitulo();
-        //String gameDescripcion = games.get(botonHome).getDescripcion();
-        //jTTitulo.setText(gameTitulo);
-        //jTextTexto.setText(gameDescripcion);
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

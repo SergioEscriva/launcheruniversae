@@ -29,16 +29,14 @@
             "Titulo":"Tipologia y caracteristicas de los EPIS",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/EPIS/EPIS",
-
             "Descripcion":"Descripcion prueba 3",
-            "Enlace": "Enlace prueba 3"
+            "Enlace": "src/simuladores/PC_EPIs/CampoPracticas_EPIS.exe"
         },
         "Simulador4": {
             "numeroSimulador":"014",
             "Titulo":"Protocolo ante una hemorragia externa",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia",
-
             "Descripcion":"Descripcion prueba",
             "Enlace": "Enlace prueba"
         },
@@ -47,7 +45,6 @@
             "Titulo":"Maniobras de extincion segun la instalacion",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Extincion/Extincion",
-
             "Descripcion":"Descripcion prueba 5",
             "Enlace": "Enlace prueba 5"
         },
@@ -56,9 +53,8 @@
             "Titulo":"Señalizacion a helicoptero desde tierra",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero",
-
             "Descripcion":"Descripcion prueba 6",
-            "Enlace": "Enlace prueba 6"
+            "Enlace": "src/simuladores/PC_HelicopteroSenalizacion/EmergenciasProteccionCivil_SeñalizacionHelicoptero.exe"
         }
 
 },

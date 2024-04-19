@@ -4,8 +4,11 @@
  */
 package launcher;
 
+import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import model.RutaHome;
 import model.Simulador;
@@ -23,6 +26,8 @@ public final class VistaGame extends javax.swing.JPanel {
     private String imagenPath;
     private ArrayList<String> imagenesSimulador;
     private LectorRutaSimulador rutaSimuladorJson;
+    private LectorTextoSimulador simuladorJson;
+    private int botonHome;
 
     // int x = 0;
     /**
@@ -30,7 +35,8 @@ public final class VistaGame extends javax.swing.JPanel {
      */
     public VistaGame() throws JSONException, URISyntaxException {
         
-
+        LectorTextoSimulador simuladorJson = new LectorTextoSimulador();
+        this.simuladorJson = simuladorJson;
         // coloca los iconos de los Simuladores
         LectorRutaSimulador rutaSimuladorJson = new LectorRutaSimulador();
         ArrayList<String> imagenesSimulador = rutaSimuladorJson.jsonArray();
@@ -43,6 +49,9 @@ public final class VistaGame extends javax.swing.JPanel {
 
     // Selecciona el Preview RutaHome
     public void selectorGame(int botonHome) throws JSONException, URISyntaxException {
+        this.botonHome = botonHome;
+        //Reinicia boton comenzar
+        ComenzarBtn.setEnabled(true);
         switch (botonHome) {
             case 1:
                 imagenPath = imagenesSimulador.get(1);
@@ -195,6 +204,7 @@ public final class VistaGame extends javax.swing.JPanel {
         cuerpoGame.add(BolitasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 320, 50));
 
         ComenzarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Comenzar.png"))); // NOI18N
+        ComenzarBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ComenzarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ComenzarBtnMouseClicked(evt);
@@ -294,7 +304,26 @@ public final class VistaGame extends javax.swing.JPanel {
     }//GEN-LAST:event_flechaIzquierdaMouseClicked
 
     private void ComenzarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComenzarBtnMouseClicked
-        // TODO add your handling code here:
+        ArrayList<Simulador> games = new ArrayList<>();
+        //Solo deja clicar el boton una vez
+        ComenzarBtn.setEnabled(false);
+        try {
+            games = simuladorJson.jsonArray();
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String gameEnlace = games.get(botonHome - 1).getEnlace();
+         ProcessBuilder pb = new ProcessBuilder(gameEnlace);         
+        try {
+            //pb.directory(new File(rutaDirectorio));  // Establecer el directorio de trabajo
+            pb.start();
+        } catch (IOException ex) {
+            Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        
 
     }//GEN-LAST:event_ComenzarBtnMouseClicked
 
@@ -344,7 +373,7 @@ public final class VistaGame extends javax.swing.JPanel {
     
 
     public void colocarTexto(int botonHome) throws JSONException {
-        LectorTextoSimulador simuladorJson = new LectorTextoSimulador();
+        
   
         ArrayList<Simulador> games = new ArrayList<>();
         

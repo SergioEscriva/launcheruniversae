@@ -9,25 +9,29 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import model.RutaHome;
 import org.json.JSONException;
-import utilidades.LectorJSON;
+import utilidades.LectorRutaSimulador;
 import utilidades.Utility;
 
 /**
  *
  * @author sergio
  */
-public class VistaGame extends javax.swing.JPanel {
+public final class VistaGame extends javax.swing.JPanel {
 
-    String imagenPath;
-    LectorJSON lectorJSON = new LectorJSON();
+    private String imagenPath;
+    private ArrayList<String> imagenesSimulador;
+    private LectorRutaSimulador rutaSimuladorJson;
 
     // int x = 0;
     /**
      * Creates new form VistaGameJP2
      */
     public VistaGame() throws JSONException, URISyntaxException {
-        initComponents();
+        LectorRutaSimulador rutaSimuladorJson = new LectorRutaSimulador();
+        this.rutaSimuladorJson = rutaSimuladorJson;
 
+        iconosSimulador();
+        initComponents();
         selectorGame(1);
 
     }
@@ -36,22 +40,27 @@ public class VistaGame extends javax.swing.JPanel {
     public void selectorGame(int botonHome) throws JSONException, URISyntaxException {
         switch (botonHome) {
             case 1:
-                imagenPath = "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor";
+                imagenPath = imagenesSimulador.get(0);
                 break;
             case 2:
-                imagenPath = "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque";
+                imagenPath = imagenesSimulador.get(1);
+                ;
                 break;
             case 3:
-                imagenPath = "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS";
+                imagenPath = imagenesSimulador.get(2);
+                ;
                 break;
             case 4:
-                imagenPath = "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia";
+                imagenPath = imagenesSimulador.get(3);
+                ;
                 break;
             case 5:
-                imagenPath = "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion";
+                imagenPath = imagenesSimulador.get(4);
+                ;
                 break;
             case 6:
-                imagenPath = "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero";
+                imagenPath = imagenesSimulador.get(5);
+                ;
                 break;
 
         }
@@ -322,6 +331,26 @@ public class VistaGame extends javax.swing.JPanel {
         bolita3.setIcon(image);
         bolita4.setIcon(image);
         bolita5.setIcon(image);
+
+    }
+
+    public void iconosSimulador() throws JSONException {
+        // Recuperamos datos del Json
+        ArrayList<String> rutas = rutaSimuladorJson.jsonArray();
+
+        // Creamos Listas para guardar las rutas de las imágenes
+        //ArrayList<String> rutasImagenesHome = new ArrayList();
+        //String rutaImagenHome = "";
+        // Iteramos el Json y añadimos las rutas de las imagenes a una lista
+        // for (int x = 0; x <= 6; x++) {
+        //JSONArray rutasArray = imagen.getRutaImagenesHome();
+        // String numeroSimulador = rutas.get(x).getNumeroSimulador();
+        //for (int i = 0; i <= 5; i++) {
+        //  rutaImagenHome = rutas.get(x).getRutaImagenes().getString(i);
+        // rutasImagenesHome.add(rutaImagenHome);
+        // }
+        // }
+        imagenesSimulador = rutas;
 
     }
 

@@ -1,26 +1,28 @@
 package model;
 
+import org.json.JSONArray;
+
 /**
  *
  * @author sergio
  */
 public class RutaSimulador {
 
-    private String[] Imagenes, RutaImagenes;
+    private JSONArray Imagenes, RutaImagenes;
 
     private String numeroSimulador;
 
-    public RutaSimulador(String[] Imagenes, String[] RutaImagenes, String numeroSimulador) {
+    public RutaSimulador(JSONArray RutaImagenes, String numeroSimulador) {
         this.Imagenes = Imagenes;
         this.RutaImagenes = RutaImagenes;
         this.numeroSimulador = numeroSimulador;
     }
 
-    public String[] getImagenes() {
+    public JSONArray getImagenes() {
         return Imagenes;
     }
 
-    public String[] getRutaImagenes() {
+    public JSONArray getRutaImagenes() {
         return RutaImagenes;
     }
 

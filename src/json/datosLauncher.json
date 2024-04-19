@@ -12,23 +12,16 @@
             "numeroSimulador":"011",
             "Titulo":"Rescate en ascensor",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor0.png",
-                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor1.png", 
-                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor2.png",
-                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor3.png",
-                            "src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor4.png"],
-            "Descripcion":"Descripcion prueba 1",
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor",
+               "Descripcion":"Descripcion prueba 1",
             "Enlace": "Enlace prueba 1"
         },
         "Simulador2": {
             "numeroSimulador":"012",
             "Titulo":"Embarque y desembarque en helicoptero",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Embarque/Embarque0.png",
-                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque1.png", 
-                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque2.png",
-                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque3.png",
-                            "src/imagenes/interfazGame/Miniaturas/Embarque/Embarque4.png"],
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Embarque/Embarque",
+
             "Descripcion":"Descripcion prueba 2",
             "Enlace": "Enlace prueba 2"
         },
@@ -36,11 +29,8 @@
             "numeroSimulador":"013",
             "Titulo":"Tipologia y caracteristicas de los EPIS",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/EPIS/EPIS0.png",
-                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS1.png", 
-                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS2.png",
-                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS3.png",
-                            "src/imagenes/interfazGame/Miniaturas/EPIS/EPIS4.png"],
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/EPIS/EPIS",
+
             "Descripcion":"Descripcion prueba 3",
             "Enlace": "Enlace prueba 3"
         },
@@ -48,11 +38,8 @@
             "numeroSimulador":"014",
             "Titulo":"Protocolo ante una hemorragia externa",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia0.png",
-                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia1.png", 
-                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia2.png",
-                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia3.png",
-                            "src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia4.png"],
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia",
+
             "Descripcion":"Descripcion prueba",
             "Enlace": "Enlace prueba"
         },
@@ -60,11 +47,8 @@
             "numeroSimulador":"015",
             "Titulo":"Maniobras de extincion segun la instalacion",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Extincion/Extincion0.png",
-                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion1.png", 
-                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion2.png",
-                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion3.png",
-                            "src/imagenes/interfazGame/Miniaturas/Extincion/Extincion4.png"],
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Extincion/Extincion",
+
             "Descripcion":"Descripcion prueba 5",
             "Enlace": "Enlace prueba 5"
         },
@@ -72,11 +56,8 @@
             "numeroSimulador":"016",
             "Titulo":"Señalizacion a helicoptero desde tierra",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
-            "RutaImagenes":["src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero0.png",
-                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero1.png", 
-                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero2.png",
-                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero3.png",
-                            "src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero4.png"],
+            "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero",
+
             "Descripcion":"Descripcion prueba 6",
             "Enlace": "Enlace prueba 6"
         }

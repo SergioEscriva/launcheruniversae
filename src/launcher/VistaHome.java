@@ -6,7 +6,6 @@ package launcher;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import javax.swing.Icon;
 import model.RutaHome;
 import org.json.JSONException;
 import utilidades.LectorRutaHome;
@@ -16,24 +15,21 @@ import utilidades.Utility;
  *
  * @author Sergios
  */
-public class VistaHome extends javax.swing.JPanel {
+public final class VistaHome extends javax.swing.JPanel {
 
-    private Icon imagenPrueba;
-    private String imagenPath;
-    String direccion000, direccion001, direccion002, direccion003, direccion004, direccion005;
-    private String direccion000G, direccion001G, direccion002G, direccion003G, direccion004G, direccion005G;
-    private String enlace;
-    private String imagen;
     private ArrayList<String> imagenesHome;
     private ArrayList<String> imagenesHome2;
-
-    LectorRutaHome rutasHome = new LectorRutaHome();
-    VistaGame vistaGame = new VistaGame();
+    private LectorRutaHome rutasHome;
+    private VistaGame vistaGame;
 
     /**
      * Creates new form VistaHomeJP
      */
     public VistaHome() throws JSONException, URISyntaxException {
+        LectorRutaHome rutasHome = new LectorRutaHome();
+        VistaGame vistaGame = new VistaGame();
+        this.rutasHome = rutasHome;
+        this.vistaGame = vistaGame;
 
         // Inicia los iconos Home
         iconosHome();

@@ -5,15 +5,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import model.Simulador;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class LectorRutaSimulador {
+public class LectorTextoSimulador {
 
     //Leer array
-    public ArrayList<String> jsonArray() throws JSONException {
-        LectorRutaSimulador lector = new LectorRutaSimulador();
+    public ArrayList<Simulador> jsonArray() throws JSONException {
+        LectorTextoSimulador lector = new LectorTextoSimulador();
 
         String fichero = lector.leerFichero();
         String cadenaJson = fichero; //CDL.rowToString(fichero);
@@ -21,7 +22,7 @@ public class LectorRutaSimulador {
         JSONArray arregloJson = new JSONArray(cadenaJson);
 
         // Creamos la lista 
-        ArrayList<String> arreglo = new ArrayList<>();
+        ArrayList<Simulador> arreglo = new ArrayList<>();
 
         // Iterar 
         for (int indice = 0; indice < 1; indice++) {  // cambiar 1 por arregloJson.length()
@@ -36,12 +37,16 @@ public class LectorRutaSimulador {
                 simuladorNumero = String.format("Simulador%s", y);
                 // Acceder a las Keys
                 JSONObject numeroSimulador = datos.getJSONObject(simuladorNumero);
-                String rutaImagenes = numeroSimulador.getString("RutaImagenes");
+                String Titulo = numeroSimulador.getString("Titulo");
+                String Descripcion = numeroSimulador.getString("Descripcion");
+                String Enlace = numeroSimulador.getString("Enlace");
                 // Acceso a las rutas de las imágenes
                 // Agregar a la lista
-                arreglo.add(rutaImagenes);
+                Simulador game = new Simulador(Titulo, Descripcion, Enlace);
+                arreglo.add(game);
             }
-            //arreglo = arreglo;
+
+            arreglo = arreglo;
         }
         return arreglo;
 

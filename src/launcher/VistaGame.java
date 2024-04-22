@@ -4,25 +4,18 @@
  */
 package launcher;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
 import javax.swing.ImageIcon;
-import model.RutaHome;
 import model.Simulador;
 import org.json.JSONException;
 import utilidades.LectorRutaSimulador;
 import utilidades.LectorTextoSimulador;
 import utilidades.Utility;
-
 
 /**
  *
@@ -35,13 +28,15 @@ public final class VistaGame extends javax.swing.JPanel {
     private LectorRutaSimulador rutaSimuladorJson;
     private LectorTextoSimulador simuladorJson;
     private int botonHome;
+    private Utility utilidades;
 
     // int x = 0;
     /**
      * Creates new form VistaGameJP2
      */
     public VistaGame() throws JSONException, URISyntaxException {
-        
+        Utility utilidades = new Utility();
+        this.utilidades = utilidades;
         LectorTextoSimulador simuladorJson = new LectorTextoSimulador();
         this.simuladorJson = simuladorJson;
         // coloca los iconos de los Simuladores
@@ -89,7 +84,6 @@ public final class VistaGame extends javax.swing.JPanel {
         imagenPrincipal.setIcon(image);
         String imagenFondoImg = "src/imagenes/interfazGame/fondoImagen.png";
 
-        Utility utilidades = new Utility();
         imagenFondo.setSize(1050, 430);
         utilidades.SetImageLabel(imagenFondo, imagenFondoImg);
         this.repaint();
@@ -290,36 +284,14 @@ public final class VistaGame extends javax.swing.JPanel {
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
-        Clip sound = getSound("src/sonidos/pasarPag.mp3");
-		playSound(sound);
+
+        //Método poner sonidos a los botones
+        Clip sound = utilidades.getSound("pasarPag.wav");
+
         colocarBolitaLlena();
-        
+
     }//GEN-LAST:event_flechaDerechaMouseClicked
-//Método poner sonidos a los botones
-    public static Clip getSound(String file)
-	{
-		try
-		{
-			
-			AudioFormat format = audioInputStream.getFormat();
-			DataLine.Info info = new DataLine.Info(Clip.class, format);
-			Clip sound = (Clip)AudioSystem.getLine(info);
-			sound.open(audioInputStream);
-			return sound;
-		}
-		catch(Exception e)
-		{
-			return null;
-		}
-	}
- 
-	public static void playSound(Clip clip)
-	{
-		clip.stop();
-		clip.setFramePosition(0);
-		clip.start();
-	}
-    
+
     // Carrusel izquierda
     private void flechaIzquierdaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaIzquierdaMouseClicked
         setLayout(null);
@@ -334,11 +306,17 @@ public final class VistaGame extends javax.swing.JPanel {
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
+
+        //Método poner sonidos a los botones
+        Clip sound = utilidades.getSound("pasarPag.wav");
         colocarBolitaLlena();
     }//GEN-LAST:event_flechaIzquierdaMouseClicked
 
     private void ComenzarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComenzarBtnMouseClicked
         ArrayList<Simulador> games = new ArrayList<>();
+
+        //Método poner sonidos a los botones
+        Clip sound = utilidades.getSound("seleccionar.wav");
         //Solo deja clicar el boton una vez
         ComenzarBtn.setEnabled(false);
         try {
@@ -347,17 +325,13 @@ public final class VistaGame extends javax.swing.JPanel {
             Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
         }
         String gameEnlace = games.get(botonHome - 1).getEnlace();
-         ProcessBuilder pb = new ProcessBuilder(gameEnlace);         
+        ProcessBuilder pb = new ProcessBuilder(gameEnlace);
         try {
             //pb.directory(new File(rutaDirectorio));  // Establecer el directorio de trabajo
             pb.start();
         } catch (IOException ex) {
             Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
 
     }//GEN-LAST:event_ComenzarBtnMouseClicked
 
@@ -402,26 +376,17 @@ public final class VistaGame extends javax.swing.JPanel {
 
     }
 
-    
-
-    
-
     public void colocarTexto(int botonHome) throws JSONException {
-        
-  
+
         ArrayList<Simulador> games = new ArrayList<>();
-        
+
         games = simuladorJson.jsonArray();
         String gameTitulo = games.get(botonHome).getTitulo();
         String gameDescripcion = games.get(botonHome).getDescripcion();
-        
+
         jTTitulo.setText(gameTitulo);
         jTextTexto.setText(gameDescripcion);
-        
-        
 
-        
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

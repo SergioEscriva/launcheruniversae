@@ -1,13 +1,12 @@
-
 package launcher;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import javax.sound.sampled.Clip;
 import model.RutaHome;
 import org.json.JSONException;
 import utilidades.LectorRutaHome;
 import utilidades.Utility;
-
 
 public final class VistaHome extends javax.swing.JPanel {
 
@@ -16,11 +15,14 @@ public final class VistaHome extends javax.swing.JPanel {
     private LectorRutaHome rutasHome;
     private VistaGame vistaGame;
     private int botonSeleccionado;
+    private Utility utilidades;
 
     /**
      * Creates new form VistaHomeJP
      */
     public VistaHome() throws JSONException, URISyntaxException {
+        Utility utilidades = new Utility();
+        this.utilidades = utilidades;
         LectorRutaHome rutasHome = new LectorRutaHome();
         VistaGame vistaGame = new VistaGame();
         this.rutasHome = rutasHome;
@@ -31,20 +33,17 @@ public final class VistaHome extends javax.swing.JPanel {
 
         // Inicia componentes
         initComponents();
-        
+
         colocarTitulo();
-        
-     
 
         // Inicia botones
         botones();
-        
-        
+
     }
-    
-    public void colocarTitulo () throws JSONException{
-         ArrayList<RutaHome> rutas = rutasHome.jsonArray();
-         
+
+    public void colocarTitulo() throws JSONException {
+        ArrayList<RutaHome> rutas = rutasHome.jsonArray();
+
         String titulo = rutas.get(botonSeleccionado).getNombre();
         jTextTitulo.setText(titulo);
     }
@@ -88,6 +87,8 @@ public final class VistaHome extends javax.swing.JPanel {
         RescateBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
+                //Método poner sonidos a los botones
+                Clip sound = utilidades.getSound("seleccionar.wav");
                 RescateBtn1MouseClicked(evt);
             }
 
@@ -103,6 +104,7 @@ public final class VistaHome extends javax.swing.JPanel {
         RescateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Clip sound = utilidades.getSound("seleccionar.wav");
                 RescateBtnMouseClicked(evt);
             }
 
@@ -117,6 +119,7 @@ public final class VistaHome extends javax.swing.JPanel {
         TipologiaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Clip sound = utilidades.getSound("seleccionar.wav");
                 TipologiaBtnMouseClicked(evt);
             }
 
@@ -131,6 +134,7 @@ public final class VistaHome extends javax.swing.JPanel {
         ProtocolBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Clip sound = utilidades.getSound("seleccionar.wav");
                 ProtocolBtnMouseClicked(evt);
             }
 
@@ -145,6 +149,7 @@ public final class VistaHome extends javax.swing.JPanel {
         ManiobrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Clip sound = utilidades.getSound("seleccionar.wav");
                 ManiobrasBtnMouseClicked(evt);
             }
 
@@ -159,6 +164,7 @@ public final class VistaHome extends javax.swing.JPanel {
         SeñalizaciónBtn.addMouseListener(new java.awt.event.MouseAdapter() {
 
             public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Clip sound = utilidades.getSound("seleccionar.wav");
                 SeñalizaciónBtnMouseClicked(evt);
             }
 
@@ -211,6 +217,9 @@ public final class VistaHome extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtn1MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RescateBtn1MouseEntered(evt);
+            }
         });
         vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 400, 310));
 
@@ -221,6 +230,9 @@ public final class VistaHome extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtnMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RescateBtnMouseEntered(evt);
+            }
         });
         vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 400, 310));
 
@@ -230,6 +242,9 @@ public final class VistaHome extends javax.swing.JPanel {
         TipologiaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TipologiaBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TipologiaBtnMouseEntered(evt);
             }
         });
         TipologiaBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -246,6 +261,9 @@ public final class VistaHome extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProtocolBtnMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ProtocolBtnMouseEntered(evt);
+            }
         });
         vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 400, 320));
 
@@ -256,6 +274,9 @@ public final class VistaHome extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManiobrasBtnMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ManiobrasBtnMouseEntered(evt);
+            }
         });
         vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 400, 320));
 
@@ -265,6 +286,9 @@ public final class VistaHome extends javax.swing.JPanel {
         SeñalizaciónBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SeñalizaciónBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SeñalizaciónBtnMouseEntered(evt);
             }
         });
         vistaHome.add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 510, 400, 320));
@@ -398,6 +422,36 @@ public final class VistaHome extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_TipologiaBtnMouseClicked
 
+    private void RescateBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtnMouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_RescateBtnMouseEntered
+
+    private void RescateBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RescateBtn1MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_RescateBtn1MouseEntered
+
+    private void TipologiaBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TipologiaBtnMouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_TipologiaBtnMouseEntered
+
+    private void ProtocolBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProtocolBtnMouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_ProtocolBtnMouseEntered
+
+    private void ManiobrasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManiobrasBtnMouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_ManiobrasBtnMouseEntered
+
+    private void SeñalizaciónBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SeñalizaciónBtnMouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_SeñalizaciónBtnMouseEntered
+
     public void launcherGame(int game) throws JSONException, URISyntaxException {
 
         vistaGame.selectorGame(game);
@@ -411,13 +465,12 @@ public final class VistaHome extends javax.swing.JPanel {
         botonSeleccionado = botonEscudo;
         vistaHome.setVisible(true);
 
-
     }
-    public void borrarTransparente(){
+
+    public void borrarTransparente() {
         transaparente.setVisible(false);
     }
 
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BarraJL;
     private javax.swing.JButton ManiobrasBtn;

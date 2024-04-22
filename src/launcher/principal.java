@@ -7,6 +7,7 @@ package launcher;
 import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.sound.sampled.Clip;
 import org.json.JSONException;
 import utilidades.Utility;
 
@@ -18,13 +19,13 @@ public class principal extends javax.swing.JFrame {
 
     VistaHome vistaHome;
     VistaGame vistaGame;
-    Utility utility;
+    Utility utilidades;
 
     /**
      * Creates new form principal
      */
     public principal() throws JSONException, URISyntaxException {
-        this.utility = new Utility();
+        this.utilidades = new Utility();
         //Utility escribir = new Utility();
         this.vistaHome = new VistaHome();
         this.vistaGame = new VistaGame();
@@ -36,7 +37,7 @@ public class principal extends javax.swing.JFrame {
 
     public void write() {
         Boolean writeNow = false;
-        utility.slowPrint(jTextArea1, "Cada escudo es un grado\ncada grado tiene 3 juegos.\nParticipa en este reto de ingenio y sabiduría...\n¿Te atreves?\n\nPulsa en la barra superior el ciclo.");
+        utilidades.slowPrint(jTextArea1, "Cada escudo es un grado\ncada grado tiene 3 juegos.\nParticipa en este reto de ingenio y sabiduría...\n¿Te atreves?\n\nPulsa en la barra superior el ciclo.");
 
     }
 
@@ -87,6 +88,11 @@ public class principal extends javax.swing.JFrame {
         launcherBtn0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         launcherBtn0.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
         launcherBtn0.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/launcheBtn00.png"))); // NOI18N
+        launcherBtn0.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn0MouseEntered(evt);
+            }
+        });
         launcherBtn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 launcherBtn0ActionPerformed(evt);
@@ -97,56 +103,114 @@ public class principal extends javax.swing.JFrame {
         launcherBtn1.setContentAreaFilled(false);
         launcherBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
         launcherBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn1.png"))); // NOI18N
+        launcherBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn1MouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                launcherBtn1MousePressed(evt);
+            }
+        });
 
         launcherBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
         launcherBtn2.setContentAreaFilled(false);
         launcherBtn2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
         launcherBtn2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn2.png"))); // NOI18N
+        launcherBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn2MouseEntered(evt);
+            }
+        });
 
         launcherBtn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton3.png"))); // NOI18N
         launcherBtn3.setContentAreaFilled(false);
         launcherBtn3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton3.png"))); // NOI18N
         launcherBtn3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn3.png"))); // NOI18N
+        launcherBtn3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn3MouseEntered(evt);
+            }
+        });
 
         launcherBtn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton4.png"))); // NOI18N
         launcherBtn4.setContentAreaFilled(false);
         launcherBtn4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton4.png"))); // NOI18N
         launcherBtn4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn4.png"))); // NOI18N
+        launcherBtn4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn4MouseEntered(evt);
+            }
+        });
 
         launcherBtn5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton5.png"))); // NOI18N
         launcherBtn5.setContentAreaFilled(false);
         launcherBtn5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton5.png"))); // NOI18N
         launcherBtn5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn5.png"))); // NOI18N
+        launcherBtn5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn5MouseEntered(evt);
+            }
+        });
 
         launcherBtn6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton6.png"))); // NOI18N
         launcherBtn6.setContentAreaFilled(false);
         launcherBtn6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton6.png"))); // NOI18N
         launcherBtn6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn6.png"))); // NOI18N
+        launcherBtn6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn6MouseEntered(evt);
+            }
+        });
 
         launcherBtn7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
         launcherBtn7.setContentAreaFilled(false);
         launcherBtn7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
         launcherBtn7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn7.png"))); // NOI18N
+        launcherBtn7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn7MouseEntered(evt);
+            }
+        });
 
         launcherBtn8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton8.png"))); // NOI18N
         launcherBtn8.setContentAreaFilled(false);
         launcherBtn8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton8.png"))); // NOI18N
         launcherBtn8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn8.png"))); // NOI18N
+        launcherBtn8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn8MouseEntered(evt);
+            }
+        });
 
         launcherBtn9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
         launcherBtn9.setContentAreaFilled(false);
         launcherBtn9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
         launcherBtn9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn9.png"))); // NOI18N
+        launcherBtn9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn9MouseEntered(evt);
+            }
+        });
 
         launcherBtn10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton10.png"))); // NOI18N
         launcherBtn10.setContentAreaFilled(false);
         launcherBtn10.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton10.png"))); // NOI18N
         launcherBtn10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn10.png"))); // NOI18N
+        launcherBtn10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn10MouseEntered(evt);
+            }
+        });
 
         launcherBtn11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton11.png"))); // NOI18N
         launcherBtn11.setContentAreaFilled(false);
         launcherBtn11.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton11.png"))); // NOI18N
         launcherBtn11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn11.png"))); // NOI18N
+        launcherBtn11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn11MouseEntered(evt);
+            }
+        });
 
         launcherBtn12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton12.png"))); // NOI18N
         launcherBtn12.setContentAreaFilled(false);
@@ -157,6 +221,11 @@ public class principal extends javax.swing.JFrame {
         launcherBtn13.setContentAreaFilled(false);
         launcherBtn13.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton13.png"))); // NOI18N
         launcherBtn13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn13.png"))); // NOI18N
+        launcherBtn13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn3Mouse(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -295,9 +364,11 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void launcherBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launcherBtn0ActionPerformed
+        //Sonido al seleccionar el ratón
+        Clip sound = utilidades.getSound("seleccionar.wav");
         // Esta acción lleva a la Vista Home
         vistaHome.borrarTransparente();
-        utility.showPanel(cuerpoPrincipal, vistaHome);
+        utilidades.showPanel(cuerpoPrincipal, vistaHome);
 
         try {
             vistaHome.mostrarHome(0);
@@ -309,10 +380,85 @@ public class principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_launcherBtn0ActionPerformed
 
+    private void launcherBtn0MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn0MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn0MouseEntered
+
+    private void launcherBtn3Mouse(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn3Mouse
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn3Mouse
+
+    private void launcherBtn1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn1MousePressed
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn1MousePressed
+
+    private void launcherBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn1MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn1MouseEntered
+
+    private void launcherBtn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn2MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn2MouseEntered
+
+    private void launcherBtn3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn3MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn3MouseEntered
+
+    private void launcherBtn4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn4MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn4MouseEntered
+
+    private void launcherBtn5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn5MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn5MouseEntered
+
+    private void launcherBtn6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn6MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn6MouseEntered
+
+    private void launcherBtn7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn7MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn7MouseEntered
+
+    private void launcherBtn8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn8MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn8MouseEntered
+
+    private void launcherBtn9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn9MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn9MouseEntered
+
+    private void launcherBtn10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn10MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn10MouseEntered
+
+    private void launcherBtn11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn11MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+    }//GEN-LAST:event_launcherBtn11MouseEntered
+
     public void launcherGame(int game) {
 
-        utility.showPanel(cuerpoPrincipal, vistaGame);
+        utilidades.showPanel(cuerpoPrincipal, vistaGame);
 
+    }
+
+    private void launcherBtn03MouseEntered(java.awt.event.MouseEvent evt) {
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
     }
 
     /**

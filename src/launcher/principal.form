@@ -151,6 +151,7 @@
                 </Property>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn0MouseEntered"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="launcherBtn0ActionPerformed"/>
               </Events>
             </Component>
@@ -167,6 +168,10 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn1MouseEntered"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn1MousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn2">
               <Properties>
@@ -181,6 +186,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn2.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn2MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn3">
               <Properties>
@@ -195,6 +203,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn3.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn3MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn4">
               <Properties>
@@ -209,6 +220,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn4.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn4MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn5">
               <Properties>
@@ -223,6 +237,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn5.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn5MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn6">
               <Properties>
@@ -237,6 +254,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn6.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn6MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn7">
               <Properties>
@@ -251,6 +271,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn7.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn7MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn8">
               <Properties>
@@ -265,6 +288,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn8.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn8MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn9">
               <Properties>
@@ -279,6 +305,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn9.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn9MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn10">
               <Properties>
@@ -293,6 +322,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn10.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn10MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn11">
               <Properties>
@@ -307,6 +339,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn11.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn11MouseEntered"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="launcherBtn12">
               <Properties>
@@ -335,6 +370,9 @@
                   <Image iconType="3" name="/imagenesIconos/LauncherBtn13.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="launcherBtn3Mouse"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

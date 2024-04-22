@@ -14,7 +14,7 @@ import utilidades.Utility;
  *
  * @author sergio
  */
-public  class principal extends javax.swing.JFrame {
+public class principal extends javax.swing.JFrame {
 
     VistaHome vistaHome;
     VistaGame vistaGame;
@@ -25,11 +25,18 @@ public  class principal extends javax.swing.JFrame {
      */
     public principal() throws JSONException, URISyntaxException {
         this.utility = new Utility();
+        //Utility escribir = new Utility();
         this.vistaHome = new VistaHome();
         this.vistaGame = new VistaGame();
         initComponents();
-        utility.showPanel(cuerpoPrincipal, vistaHome);
-       
+        write();
+        //utility.showPanel(cuerpoPrincipal, vistaHome);
+
+    }
+
+    public void write() {
+        Boolean writeNow = false;
+        utility.slowPrint(jTextArea1, "Cada escudo es un grado\ncada grado tiene 3 juegos.\nParticipa en este reto de ingenio y sabiduría...\n¿Te atreves?\n\nPulsa en la barra superior el ciclo.");
 
     }
 
@@ -59,6 +66,9 @@ public  class principal extends javax.swing.JFrame {
         launcherBtn12 = new javax.swing.JButton();
         launcherBtn13 = new javax.swing.JButton();
         cuerpoPrincipal = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel5 = new javax.swing.JLabel();
         FondoJL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -213,15 +223,50 @@ public  class principal extends javax.swing.JFrame {
         cuerpoPrincipal.setMinimumSize(new java.awt.Dimension(1540, 850));
         cuerpoPrincipal.setPreferredSize(new java.awt.Dimension(1540, 850));
 
+        jScrollPane1.setBackground(new java.awt.Color(10, 38, 72));
+        jScrollPane1.setBorder(null);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(10, 38, 72));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(10, 38, 72));
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setAutoscrolls(false);
+        jTextArea1.setCaretColor(new java.awt.Color(10, 38, 72));
+        jTextArea1.setDisabledTextColor(new java.awt.Color(10, 38, 72));
+        jTextArea1.setFocusable(false);
+        jTextArea1.setSelectedTextColor(new java.awt.Color(10, 38, 72));
+        jTextArea1.setSelectionColor(new java.awt.Color(10, 38, 72));
+        jTextArea1.setVerifyInputWhenFocusTarget(false);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoUniversae.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+
         javax.swing.GroupLayout cuerpoPrincipalLayout = new javax.swing.GroupLayout(cuerpoPrincipal);
         cuerpoPrincipal.setLayout(cuerpoPrincipalLayout);
         cuerpoPrincipalLayout.setHorizontalGroup(
             cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1540, Short.MAX_VALUE)
+            .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                .addGroup(cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                        .addGap(532, 532, 532)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                        .addGap(481, 481, 481)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         cuerpoPrincipalLayout.setVerticalGroup(
             cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 850, Short.MAX_VALUE)
+            .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(259, Short.MAX_VALUE))
         );
 
         FondoP.add(cuerpoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
@@ -252,9 +297,8 @@ public  class principal extends javax.swing.JFrame {
     private void launcherBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launcherBtn0ActionPerformed
         // Esta acción lleva a la Vista Home
         vistaHome.borrarTransparente();
-        Utility.showPanel(cuerpoPrincipal, vistaHome);
-        
-        
+        utility.showPanel(cuerpoPrincipal, vistaHome);
+
         try {
             vistaHome.mostrarHome(0);
         } catch (JSONException ex) {
@@ -319,7 +363,10 @@ public  class principal extends javax.swing.JFrame {
     private javax.swing.JLabel FondoJL;
     public static javax.swing.JPanel FondoP;
     private javax.swing.JPanel cuerpoPrincipal;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton launcherBtn0;
     private javax.swing.JButton launcherBtn1;
     private javax.swing.JButton launcherBtn10;

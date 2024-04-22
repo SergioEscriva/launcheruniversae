@@ -8,6 +8,12 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
+import java.io.File;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 import javax.swing.AbstractAction;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -45,6 +51,70 @@ public class Utility {
         antiguo.revalidate();
         antiguo.repaint();
 
+    }
+
+    public Boolean slowPrint(JTextArea texter, String message) {
+        if (timer != null && timer.isRunning()) {
+            return true;
+        }
+        index = 0;
+        texter.setText("");
+
+        timer = new javax.swing.Timer(50, new AbstractAction() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texter.setText(texter.getText() + String.valueOf(message.charAt(index)));
+                texter.setForeground(Color.white);
+
+                index++;
+                if (index >= message.length()) {
+                    timer.stop();
+                }
+            }
+
+        });
+        timer.start();
+        return true;
+    }
+
+    public void slowPrint1(JLabel texter, String message) {
+
+        if (timer != null && timer.isRunning()) {
+            return;
+        }
+        index = 0;
+        texter.setText("");
+
+        timer = new javax.swing.Timer(50, new AbstractAction() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texter.setText(texter.getText() + String.valueOf(message.charAt(index)));
+                texter.setForeground(Color.white);
+
+                index++;
+                if (index >= message.length()) {
+                    timer.stop();
+                }
+            }
+
+        });
+        timer.start();
+
+    }
+
+    /**
+     * Pausa la ejecución durante X segundos.
+     *
+     * @param segundos El número de segundos que se quiere esperar.
+     */
+    public static void esperar(int segundos) {
+        try {
+            Thread.sleep(segundos * 1000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public static Clip getSound(String files) {

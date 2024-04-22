@@ -4,11 +4,14 @@
  */
 package launcher;
 
+import java.awt.Color;
 import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.UIManager;
 import org.json.JSONException;
 import utilidades.Utility;
+
 
 /**
  *
@@ -42,6 +45,7 @@ public  class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
         FondoP = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         launcherBtn0 = new javax.swing.JButton();
@@ -61,6 +65,17 @@ public  class principal extends javax.swing.JFrame {
         cuerpoPrincipal = new javax.swing.JPanel();
         FondoJL = new javax.swing.JLabel();
 
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setExtendedState(6);
@@ -73,10 +88,16 @@ public  class principal extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
 
         launcherBtn0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
+        launcherBtn0.setToolTipText("HOME");
         launcherBtn0.setContentAreaFilled(false);
         launcherBtn0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         launcherBtn0.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
         launcherBtn0.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/launcheBtn00.png"))); // NOI18N
+        launcherBtn0.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn0MouseMoved(evt);
+            }
+        });
         launcherBtn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 launcherBtn0ActionPerformed(evt);
@@ -84,69 +105,137 @@ public  class principal extends javax.swing.JFrame {
         });
 
         launcherBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
+        launcherBtn1.setToolTipText("");
         launcherBtn1.setContentAreaFilled(false);
         launcherBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
         launcherBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn1.png"))); // NOI18N
+        launcherBtn1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn1MouseMoved(evt);
+            }
+        });
 
         launcherBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
         launcherBtn2.setContentAreaFilled(false);
         launcherBtn2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton2.png"))); // NOI18N
         launcherBtn2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn2.png"))); // NOI18N
+        launcherBtn2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn2MouseMoved(evt);
+            }
+        });
 
         launcherBtn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton3.png"))); // NOI18N
         launcherBtn3.setContentAreaFilled(false);
         launcherBtn3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton3.png"))); // NOI18N
         launcherBtn3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn3.png"))); // NOI18N
+        launcherBtn3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn3MouseMoved(evt);
+            }
+        });
 
         launcherBtn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton4.png"))); // NOI18N
         launcherBtn4.setContentAreaFilled(false);
         launcherBtn4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton4.png"))); // NOI18N
         launcherBtn4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn4.png"))); // NOI18N
+        launcherBtn4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn4MouseMoved(evt);
+            }
+        });
 
         launcherBtn5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton5.png"))); // NOI18N
         launcherBtn5.setContentAreaFilled(false);
         launcherBtn5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton5.png"))); // NOI18N
         launcherBtn5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn5.png"))); // NOI18N
+        launcherBtn5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn5MouseMoved(evt);
+            }
+        });
 
         launcherBtn6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton6.png"))); // NOI18N
         launcherBtn6.setContentAreaFilled(false);
         launcherBtn6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton6.png"))); // NOI18N
         launcherBtn6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn6.png"))); // NOI18N
+        launcherBtn6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn6MouseMoved(evt);
+            }
+        });
 
         launcherBtn7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
+        launcherBtn7.setToolTipText("");
         launcherBtn7.setContentAreaFilled(false);
         launcherBtn7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
         launcherBtn7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn7.png"))); // NOI18N
+        launcherBtn7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn7MouseMoved(evt);
+            }
+        });
 
         launcherBtn8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton8.png"))); // NOI18N
         launcherBtn8.setContentAreaFilled(false);
         launcherBtn8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton8.png"))); // NOI18N
         launcherBtn8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn8.png"))); // NOI18N
+        launcherBtn8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn8MouseMoved(evt);
+            }
+        });
 
         launcherBtn9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
+        launcherBtn9.setToolTipText("");
         launcherBtn9.setContentAreaFilled(false);
         launcherBtn9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
         launcherBtn9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn9.png"))); // NOI18N
+        launcherBtn9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn9MouseMoved(evt);
+            }
+        });
 
         launcherBtn10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton10.png"))); // NOI18N
         launcherBtn10.setContentAreaFilled(false);
         launcherBtn10.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton10.png"))); // NOI18N
         launcherBtn10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn10.png"))); // NOI18N
+        launcherBtn10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn10MouseMoved(evt);
+            }
+        });
 
         launcherBtn11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton11.png"))); // NOI18N
         launcherBtn11.setContentAreaFilled(false);
         launcherBtn11.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton11.png"))); // NOI18N
         launcherBtn11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn11.png"))); // NOI18N
+        launcherBtn11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn11MouseMoved(evt);
+            }
+        });
 
         launcherBtn12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton12.png"))); // NOI18N
         launcherBtn12.setContentAreaFilled(false);
         launcherBtn12.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton12.png"))); // NOI18N
         launcherBtn12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn12.png"))); // NOI18N
+        launcherBtn12.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn12MouseMoved(evt);
+            }
+        });
 
         launcherBtn13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton13.png"))); // NOI18N
         launcherBtn13.setContentAreaFilled(false);
         launcherBtn13.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton13.png"))); // NOI18N
         launcherBtn13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn13.png"))); // NOI18N
+        launcherBtn13.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                launcherBtn13MouseMoved(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -184,26 +273,24 @@ public  class principal extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(launcherBtn10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(launcherBtn13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(launcherBtn0, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                    .addComponent(launcherBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(launcherBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(launcherBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(launcherBtn0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addComponent(launcherBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addComponent(launcherBtn11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(launcherBtn12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         FondoP.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 1550, 170));
@@ -253,6 +340,8 @@ public  class principal extends javax.swing.JFrame {
         // Esta acción lleva a la Vista Home
         vistaHome.borrarTransparente();
         Utility.showPanel(cuerpoPrincipal, vistaHome);
+          //texto emergente
+        
         
         
         try {
@@ -262,8 +351,96 @@ public  class principal extends javax.swing.JFrame {
         } catch (URISyntaxException ex) {
             Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
     }//GEN-LAST:event_launcherBtn0ActionPerformed
+
+    private void launcherBtn1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn1MouseMoved
+       //texto emergente
+        String texto="Este boton hace....";
+     
+        launcherBtn1.setToolTipText(texto);
+        UIManager.put("ToolTip.foreground", Color.WHITE);
+    }//GEN-LAST:event_launcherBtn1MouseMoved
+
+    private void launcherBtn2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn2MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn2.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn2MouseMoved
+
+    private void launcherBtn3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn3MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn3.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn3MouseMoved
+
+    private void launcherBtn4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn4MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn4.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn4MouseMoved
+
+    private void launcherBtn5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn5MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn5.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn5MouseMoved
+
+    private void launcherBtn6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn6MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn6.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn6MouseMoved
+
+    private void launcherBtn7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn7MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn7.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn7MouseMoved
+
+    private void launcherBtn8MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn8MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn8.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn8MouseMoved
+
+    private void launcherBtn9MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn9MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn9.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn9MouseMoved
+
+    private void launcherBtn10MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn10MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn10.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn10MouseMoved
+
+    private void launcherBtn11MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn11MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn11.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn11MouseMoved
+
+    private void launcherBtn12MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn12MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn12.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn12MouseMoved
+
+    private void launcherBtn13MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn13MouseMoved
+        //texto emergente
+        String texto="Este boton hace....";
+        launcherBtn13.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn13MouseMoved
+
+    private void launcherBtn0MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn0MouseMoved
+        
+        //texto emergente
+        String texto="HOME";
+        launcherBtn0.setToolTipText(texto);        
+    
+    }//GEN-LAST:event_launcherBtn0MouseMoved
 
     public void launcherGame(int game) {
 
@@ -319,6 +496,7 @@ public  class principal extends javax.swing.JFrame {
     private javax.swing.JLabel FondoJL;
     public static javax.swing.JPanel FondoP;
     private javax.swing.JPanel cuerpoPrincipal;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton launcherBtn0;
     private javax.swing.JButton launcherBtn1;

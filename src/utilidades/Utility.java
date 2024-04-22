@@ -9,6 +9,10 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -140,6 +144,61 @@ public class Utility {
         clip.stop();
         clip.setFramePosition(0);
         clip.start();
+    }
+
+    public String leerArchivoEstadisticas() {
+
+        try {
+            File myObj = new File("src/utilidades/estadistica.txt");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                return data;
+
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public String leerEstadistica(int grado) {
+        //int grado = 5;
+        String data = leerArchivoEstadisticas();
+        int gradoGuardado = grado * 2;
+        String estadistica1 = String.valueOf(data.charAt(gradoGuardado));
+        estadistica1 += String.valueOf(data.charAt(gradoGuardado + 1));
+        String estadisticaFinal = String.valueOf(Integer.valueOf(estadistica1));
+        System.out.println("ESTA " + estadisticaFinal);
+        return estadisticaFinal;
+    }
+
+    public void escribirEstadistica(int grado) {
+        //int grado = 5;
+        String data = leerArchivoEstadisticas();
+        int gradoGuardado = grado * 2;
+        String estadistica1 = String.valueOf(data.charAt(gradoGuardado));
+        estadistica1 += String.valueOf(data.charAt(gradoGuardado + 1));
+        String estadisticaFinal = String.valueOf(Integer.valueOf(estadistica1) + 1);
+        // Reemplaza la estadística del grado
+        String original = data;
+        int x = gradoGuardado;// indice del caracter a reemplazar(empieza a contar en cero)
+        String nuevo = new StringBuilder(original).replace(x, x + 1, estadisticaFinal).toString();// nueva cadena reemplazando el caracter x
+        nuevo = new StringBuilder(nuevo).delete(x + 2, x + 3).toString();// borra el segundo caracter, que ya hemos introducido antes.
+        System.out.println("Original: " + original);
+        System.out.println("Nuevoooo: " + nuevo);
+
+        try {
+            FileWriter myWriter = new FileWriter("src/utilidades/estadistica.txt");
+            myWriter.write(nuevo);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
 }

@@ -4,6 +4,7 @@
  */
 package launcher;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -58,6 +59,9 @@ public final class VistaGame extends javax.swing.JPanel {
         this.botonHome = botonHome;
         //Reinicia boton comenzar
         ComenzarBtn.setEnabled(true);
+
+        // llamada metodo numero de jugadas
+        jugadores(botonHome);
         switch (botonHome) {
             case 1:
                 imagenPath = imagenesSimulador.get(1);
@@ -98,6 +102,15 @@ public final class VistaGame extends javax.swing.JPanel {
         colocarTexto(botonHome - 1);
     }
 
+    // Imprime en pantalla numero de jugadas
+    public void jugadores(int game) {
+        // El número de grado *10 
+        int grado = 10;
+        String numero = utilidades.leerEstadistica(grado + (botonHome - 1));
+        jugadasJL.setForeground(Color.white);
+        jugadasJL.setText(numero + " jugadores lo han disfrutado ya.");
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -126,6 +139,7 @@ public final class VistaGame extends javax.swing.JPanel {
         barraJL = new javax.swing.JLabel();
         jScrollTitulo = new javax.swing.JScrollPane();
         jTTitulo = new javax.swing.JTextArea();
+        jugadasJL = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(10, 38, 72));
         setMaximumSize(new java.awt.Dimension(1540, 850));
@@ -266,6 +280,11 @@ public final class VistaGame extends javax.swing.JPanel {
 
         cuerpoGame.add(descripciónPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 910, 250));
 
+        jugadasJL.setBackground(new java.awt.Color(255, 255, 255));
+        jugadasJL.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jugadasJL.setText("jLabel1");
+        cuerpoGame.add(jugadasJL, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 740, 220, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -328,6 +347,10 @@ public final class VistaGame extends javax.swing.JPanel {
     private void ComenzarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComenzarBtnMouseClicked
         ArrayList<Simulador> games = new ArrayList<>();
 
+        // Guardar estadística
+        // El número de grado *10 
+        int grado = 10;
+        utilidades.escribirEstadistica(grado + (botonHome - 1));
         //Método poner sonidos a los botones
         Clip sound = utilidades.getSound("seleccionar.wav");
         //Solo deja clicar el boton una vez
@@ -437,5 +460,6 @@ public final class VistaGame extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollTitulo;
     private javax.swing.JTextArea jTTitulo;
     private javax.swing.JTextArea jTextTexto;
+    private javax.swing.JLabel jugadasJL;
     // End of variables declaration//GEN-END:variables
 }

@@ -34,8 +34,10 @@ public class principal extends javax.swing.JFrame {
         this.rutasHome = rutasHome;
         this.vistaHome = new VistaHome();
         this.vistaGame = new VistaGame();
+        //utilidades.leerEstadistica(5);
         initComponents();
         write();
+        //utilidades.escribirEstadistica(5);
 
     }
 

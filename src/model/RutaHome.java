@@ -6,6 +6,8 @@ import org.json.JSONArray;
 public class RutaHome {
 
     private JSONArray ImagenesHome, RutaImagenesHome, ImagenesHomeGrandes, RutaImagenesHomeGrandes;
+
+   
     private String Nombre;
 
     public RutaHome(String Nombre, JSONArray ImagenesHome, JSONArray RutaImagenesHome, JSONArray ImagenesHomeGrandes, JSONArray RutaImagenesHomeGrandes) {
@@ -15,6 +17,7 @@ public class RutaHome {
         this.ImagenesHomeGrandes = ImagenesHomeGrandes;
         this.RutaImagenesHomeGrandes = RutaImagenesHomeGrandes;
     }
+    
 
     public String getNombre() {
         return Nombre;

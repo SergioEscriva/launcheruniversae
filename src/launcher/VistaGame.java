@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import model.RutaHome;
 import model.Simulador;
 import org.json.JSONException;
 import utilidades.LectorRutaSimulador;
@@ -28,13 +27,18 @@ public final class VistaGame extends javax.swing.JPanel {
     private LectorRutaSimulador rutaSimuladorJson;
     private LectorTextoSimulador simuladorJson;
     private int botonHome;
+    private Utility utilidades;
+    //private VistaHome vistaHome;
 
     // int x = 0;
     /**
      * Creates new form VistaGameJP2
      */
     public VistaGame() throws JSONException, URISyntaxException {
-        
+        Utility utilidades = new Utility();
+        this.utilidades = utilidades;
+        //VistaHome vistaHome = new VistaHome();
+        //this.vistaHome = vistaHome;
         LectorTextoSimulador simuladorJson = new LectorTextoSimulador();
         this.simuladorJson = simuladorJson;
         // coloca los iconos de los Simuladores
@@ -82,7 +86,6 @@ public final class VistaGame extends javax.swing.JPanel {
         imagenPrincipal.setIcon(image);
         String imagenFondoImg = "src/imagenes/interfazGame/fondoImagen.png";
 
-        Utility utilidades = new Utility();
         imagenFondo.setSize(1050, 430);
         utilidades.SetImageLabel(imagenFondo, imagenFondoImg);
         this.repaint();
@@ -115,6 +118,7 @@ public final class VistaGame extends javax.swing.JPanel {
         bolita5 = new javax.swing.JLabel();
         ComenzarBtn = new javax.swing.JLabel();
         descripciónPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jScrollTexto = new javax.swing.JScrollPane();
         jTextTexto = new javax.swing.JTextArea();
         barraJL = new javax.swing.JLabel();
@@ -204,7 +208,7 @@ public final class VistaGame extends javax.swing.JPanel {
         cuerpoGame.add(BolitasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 320, 50));
 
         ComenzarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Comenzar.png"))); // NOI18N
-        ComenzarBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ComenzarBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ComenzarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ComenzarBtnMouseClicked(evt);
@@ -214,6 +218,14 @@ public final class VistaGame extends javax.swing.JPanel {
 
         descripciónPanel.setBackground(new java.awt.Color(10, 38, 72));
         descripciónPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Atras.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        descripciónPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 60));
 
         jScrollTexto.setBorder(null);
 
@@ -313,19 +325,27 @@ public final class VistaGame extends javax.swing.JPanel {
             Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
         }
         String gameEnlace = games.get(botonHome - 1).getEnlace();
-         ProcessBuilder pb = new ProcessBuilder(gameEnlace);         
+        ProcessBuilder pb = new ProcessBuilder(gameEnlace);
         try {
             //pb.directory(new File(rutaDirectorio));  // Establecer el directorio de trabajo
             pb.start();
         } catch (IOException ex) {
             Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
 
     }//GEN-LAST:event_ComenzarBtnMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        VistaHome vistaHome = null;
+        try {
+            vistaHome = new VistaHome();
+        } catch (JSONException ex) {
+            Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        utilidades.showPanel(this, vistaHome);
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     //Método para bolitas llenas
     public void colocarBolitaLlena() {
@@ -368,26 +388,17 @@ public final class VistaGame extends javax.swing.JPanel {
 
     }
 
-    
-
-    
-
     public void colocarTexto(int botonHome) throws JSONException {
-        
-  
+
         ArrayList<Simulador> games = new ArrayList<>();
-        
+
         games = simuladorJson.jsonArray();
         String gameTitulo = games.get(botonHome).getTitulo();
         String gameDescripcion = games.get(botonHome).getDescripcion();
-        
+
         jTTitulo.setText(gameTitulo);
         jTextTexto.setText(gameDescripcion);
-        
-        
 
-        
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -405,6 +416,7 @@ public final class VistaGame extends javax.swing.JPanel {
     private javax.swing.JLabel flechaIzquierda;
     private javax.swing.JLabel imagenFondo;
     private javax.swing.JLabel imagenPrincipal;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollTexto;
     private javax.swing.JScrollPane jScrollTitulo;
     private javax.swing.JTextArea jTTitulo;

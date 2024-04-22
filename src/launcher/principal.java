@@ -5,10 +5,13 @@
 package launcher;
 
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sound.sampled.Clip;
+import model.RutaHome;
 import org.json.JSONException;
+import utilidades.LectorRutaHome;
 import utilidades.Utility;
 
 /**
@@ -17,21 +20,22 @@ import utilidades.Utility;
  */
 public class principal extends javax.swing.JFrame {
 
-    VistaHome vistaHome;
-    VistaGame vistaGame;
-    Utility utilidades;
+    private VistaHome vistaHome;
+    private VistaGame vistaGame;
+    private Utility utilidades;
+    private LectorRutaHome rutasHome;
 
     /**
      * Creates new form principal
      */
     public principal() throws JSONException, URISyntaxException {
         this.utilidades = new Utility();
-        //Utility escribir = new Utility();
+        LectorRutaHome rutasHome = new LectorRutaHome();
+        this.rutasHome = rutasHome;
         this.vistaHome = new VistaHome();
         this.vistaGame = new VistaGame();
         initComponents();
         write();
-        //utility.showPanel(cuerpoPrincipal, vistaHome);
 
     }
 
@@ -69,7 +73,10 @@ public class principal extends javax.swing.JFrame {
         cuerpoPrincipal = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel5 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextTitulo = new javax.swing.JTextArea();
+        tituloGradoJL = new javax.swing.JLabel();
+        barritaJL = new javax.swing.JLabel();
         FondoJL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -311,8 +318,27 @@ public class principal extends javax.swing.JFrame {
         jTextArea1.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoUniversae.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane2.setHorizontalScrollBar(null);
+        jScrollPane2.setOpaque(false);
+
+        jTextTitulo.setEditable(false);
+        jTextTitulo.setBackground(new java.awt.Color(10, 38, 72));
+        jTextTitulo.setColumns(20);
+        jTextTitulo.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        jTextTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jTextTitulo.setRows(5);
+        jTextTitulo.setText("16 Grados diferentes a elegir");
+        jTextTitulo.setToolTipText("16 Grados diferentes a elegir");
+        jTextTitulo.setAutoscrolls(false);
+        jScrollPane2.setViewportView(jTextTitulo);
+
+        tituloGradoJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoUniversae.png"))); // NOI18N
+        tituloGradoJL.setText("jLabel5");
+
+        barritaJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Barrita aislada descripción.png"))); // NOI18N
 
         javax.swing.GroupLayout cuerpoPrincipalLayout = new javax.swing.GroupLayout(cuerpoPrincipal);
         cuerpoPrincipal.setLayout(cuerpoPrincipalLayout);
@@ -321,19 +347,31 @@ public class principal extends javax.swing.JFrame {
             .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
                 .addGroup(cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
-                        .addGap(532, 532, 532)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
                         .addGap(481, 481, 481)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                        .addGap(634, 634, 634)
+                        .addComponent(tituloGradoJL, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(barritaJL)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
         cuerpoPrincipalLayout.setVerticalGroup(
             cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGroup(cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(barritaJL))
+                    .addGroup(cuerpoPrincipalLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
+                .addComponent(tituloGradoJL, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(259, Short.MAX_VALUE))
         );
@@ -364,10 +402,15 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void launcherBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launcherBtn0ActionPerformed
+        jTextTitulo.setText("16 Grados diferentes a elegir");
+
         //Sonido al seleccionar el ratón
         Clip sound = utilidades.getSound("seleccionar.wav");
         // Esta acción lleva a la Vista Home
         vistaHome.borrarTransparente();
+
+        // Se queda el escudo en Grande
+        launcherBtn0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/launcheBtn00.png")));
         utilidades.showPanel(cuerpoPrincipal, vistaHome);
 
         try {
@@ -380,8 +423,24 @@ public class principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_launcherBtn0ActionPerformed
 
+    public String nombreGrado(int numero) throws JSONException {
+        ArrayList<RutaHome> rutas = rutasHome.jsonArray();
+
+        String titulo = rutas.get(numero).getNombre();
+        return titulo;
+    }
+
     private void launcherBtn0MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn0MouseEntered
         //Sonido al pasar el ratón
+        String titulo = "Grado";
+        // Quita el botón grande una vez seleccionado
+        launcherBtn0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png")));
+        try {
+            titulo = nombreGrado(0);
+        } catch (JSONException ex) {
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jTextTitulo.setText(titulo);
         Clip sound = utilidades.getSound("pasar.wav");
     }//GEN-LAST:event_launcherBtn0MouseEntered
 
@@ -456,11 +515,6 @@ public class principal extends javax.swing.JFrame {
 
     }
 
-    private void launcherBtn03MouseEntered(java.awt.event.MouseEvent evt) {
-        //Sonido al pasar el ratón
-        Clip sound = utilidades.getSound("pasar.wav");
-    }
-
     /**
      * @param args the command line arguments
      */
@@ -508,11 +562,13 @@ public class principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FondoJL;
     public static javax.swing.JPanel FondoP;
+    private javax.swing.JLabel barritaJL;
     private javax.swing.JPanel cuerpoPrincipal;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextTitulo;
     private javax.swing.JButton launcherBtn0;
     private javax.swing.JButton launcherBtn1;
     private javax.swing.JButton launcherBtn10;
@@ -527,5 +583,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton launcherBtn7;
     private javax.swing.JButton launcherBtn8;
     private javax.swing.JButton launcherBtn9;
+    private javax.swing.JLabel tituloGradoJL;
     // End of variables declaration//GEN-END:variables
 }

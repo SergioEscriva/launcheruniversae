@@ -3,17 +3,17 @@ package model;
 
 public class Simulador {
 
-    private String numeroSimulador, Titulo, Descripcion, Enlace;
+    private String NombreSimulador, Titulo, Descripcion, Enlace;
 
-    public Simulador(String Titulo, String Descripcion, String Enlace) {
-        this.numeroSimulador = numeroSimulador;
+    public Simulador(String NombreSimulador, String Titulo, String Descripcion, String Enlace) {
+        this.NombreSimulador = NombreSimulador;
         this.Titulo = Titulo;
         this.Descripcion = Descripcion;
         this.Enlace = Enlace;
     }
 
-    public String getNumeroSimulador() {
-        return numeroSimulador;
+    public String getNombreSimulador() {
+        return NombreSimulador;
     }
 
     public String getTitulo() {

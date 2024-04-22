@@ -9,7 +9,7 @@
                                 "/imagenes/Tipologia2.png","/imagenes/Protocolo2.png",
                                 "/imagenes/Maniobras2.png","/imagenes/Señalizacion2.png"],
         "Simulador1": {
-            "numeroSimulador":"011",
+            "NombreSimulador":"Simulador ascensor",
              "Titulo":"Rescate en ascensor",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Embarque/Embarque",
@@ -17,7 +17,7 @@
             "Enlace": "Enlace prueba 1"
         },
         "Simulador2": {
-            "numeroSimulador":"012",
+            "NombreSimulador":"Simulador helicoptero",
             "Titulo":"Embarque y desembarque en helicoptero",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Ascensor/Ascensor",
@@ -25,7 +25,7 @@
             "Enlace": "Enlace prueba 2"
         },
         "Simulador3": {
-            "numeroSimulador":"013",
+            "NombreSimulador":"Simulador EPIS",
             "Titulo":"Tipologia y caracteristicas de los EPIS",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/EPIS/EPIS",
@@ -33,7 +33,7 @@
             "Enlace": "src/simuladores/PC_EPIs/CampoPracticas_EPIS.exe"
         },
         "Simulador4": {
-            "numeroSimulador":"014",
+            "NombreSimulador":"Simulador Hemorragia",
             "Titulo":"Protocolo ante una hemorragia externa",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Hemorragia/Hemorragia",
@@ -41,7 +41,7 @@
             "Enlace": "Enlace prueba"
         },
         "Simulador5": {
-            "numeroSimulador":"015",
+            "NombreSimulador":"Simulador extincion",
             "Titulo":"Maniobras de extincion segun la instalacion",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Extincion/Extincion",
@@ -49,7 +49,7 @@
             "Enlace": "Enlace prueba 5"
         },
         "Simulador6": {
-            "numeroSimulador":"016",
+            "NombreSimulador":"Simulador helicoptero a tierra",
             "Titulo":"Señalizacion a helicoptero desde tierra",
             "Imagenes":["Img0","Img1", "Img2", "Img3", "Img4"],
             "RutaImagenes":"src/imagenes/interfazGame/Miniaturas/Helicoptero/Helicoptero",

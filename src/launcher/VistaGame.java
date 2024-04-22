@@ -4,11 +4,17 @@
  */
 package launcher;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 import javax.swing.ImageIcon;
 import model.RutaHome;
 import model.Simulador;
@@ -16,6 +22,7 @@ import org.json.JSONException;
 import utilidades.LectorRutaSimulador;
 import utilidades.LectorTextoSimulador;
 import utilidades.Utility;
+
 
 /**
  *
@@ -283,9 +290,36 @@ public final class VistaGame extends javax.swing.JPanel {
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
+        Clip sound = getSound("src/sonidos/pasarPag.mp3");
+		playSound(sound);
         colocarBolitaLlena();
+        
     }//GEN-LAST:event_flechaDerechaMouseClicked
-
+//Método poner sonidos a los botones
+    public static Clip getSound(String file)
+	{
+		try
+		{
+			
+			AudioFormat format = audioInputStream.getFormat();
+			DataLine.Info info = new DataLine.Info(Clip.class, format);
+			Clip sound = (Clip)AudioSystem.getLine(info);
+			sound.open(audioInputStream);
+			return sound;
+		}
+		catch(Exception e)
+		{
+			return null;
+		}
+	}
+ 
+	public static void playSound(Clip clip)
+	{
+		clip.stop();
+		clip.setFramePosition(0);
+		clip.start();
+	}
+    
     // Carrusel izquierda
     private void flechaIzquierdaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaIzquierdaMouseClicked
         setLayout(null);

@@ -15,6 +15,7 @@ public final class VistaHome extends javax.swing.JPanel {
     private ArrayList<String> imagenesHome2;
     private LectorRutaHome rutasHome;
     private VistaGame vistaGame;
+    private int botonSeleccionado;
 
     /**
      * Creates new form VistaHomeJP
@@ -30,9 +31,22 @@ public final class VistaHome extends javax.swing.JPanel {
 
         // Inicia componentes
         initComponents();
+        
+        colocarTitulo();
+        
+     
 
         // Inicia botones
         botones();
+        
+        
+    }
+    
+    public void colocarTitulo () throws JSONException{
+         ArrayList<RutaHome> rutas = rutasHome.jsonArray();
+         
+        String titulo = rutas.get(botonSeleccionado).getNombre();
+        jTextTitulo.setText(titulo);
     }
 
     public void iconosHome() throws JSONException {
@@ -78,7 +92,7 @@ public final class VistaHome extends javax.swing.JPanel {
             }
 
         });
-        vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 400, 310));
+        vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 400, 310));
 
         RescateBtn.setBackground(new java.awt.Color(0, 0, 0));
         RescateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(1)))
@@ -93,7 +107,7 @@ public final class VistaHome extends javax.swing.JPanel {
             }
 
         });
-        vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
+        vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 400, 310));
 
         TipologiaBtn.setBackground(new java.awt.Color(182, 225, 255));
         TipologiaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(2))));
@@ -107,7 +121,7 @@ public final class VistaHome extends javax.swing.JPanel {
             }
 
         });
-        vistaHome.add(TipologiaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
+        vistaHome.add(TipologiaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 160, 400, 310));
 
         ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
         ProtocolBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(3))));
@@ -121,7 +135,7 @@ public final class VistaHome extends javax.swing.JPanel {
             }
 
         });
-        vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 410, 320));
+        vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 400, 310));
 
         ManiobrasBtn.setBackground(new java.awt.Color(182, 225, 255));
         ManiobrasBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(4))));
@@ -135,7 +149,7 @@ public final class VistaHome extends javax.swing.JPanel {
             }
 
         });
-        vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 400, 320));
+        vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 400, 310));
 
         SeñalizaciónBtn.setBackground(new java.awt.Color(182, 225, 255));
         SeñalizaciónBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagenesHome.get(5))));
@@ -149,7 +163,7 @@ public final class VistaHome extends javax.swing.JPanel {
             }
 
         });
-        vistaHome.add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 410, 430, 310));
+        vistaHome.add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 510, 400, 310));
 
     }
 
@@ -169,6 +183,9 @@ public final class VistaHome extends javax.swing.JPanel {
         ProtocolBtn = new javax.swing.JButton();
         ManiobrasBtn = new javax.swing.JButton();
         SeñalizaciónBtn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextTitulo = new javax.swing.JTextArea();
+        BarraJL = new javax.swing.JLabel();
         transaparente = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(0, 0, 0));
@@ -180,30 +197,35 @@ public final class VistaHome extends javax.swing.JPanel {
         setVerifyInputWhenFocusTarget(false);
 
         vistaHome.setBackground(new java.awt.Color(10, 38, 72));
+        vistaHome.setForeground(new java.awt.Color(255, 255, 255));
+        vistaHome.setFont(new java.awt.Font("Raleway Black", 0, 14)); // NOI18N
         vistaHome.setMaximumSize(new java.awt.Dimension(1540, 850));
         vistaHome.setMinimumSize(new java.awt.Dimension(1540, 850));
         vistaHome.setPreferredSize(new java.awt.Dimension(1540, 850));
         vistaHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         RescateBtn1.setBackground(new java.awt.Color(0, 0, 0));
+        RescateBtn1.setBorder(new javax.swing.border.MatteBorder(null));
         RescateBtn1.setContentAreaFilled(false);
         RescateBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtn1MouseClicked(evt);
             }
         });
-        vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 400, 310));
+        vistaHome.add(RescateBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 400, 310));
 
         RescateBtn.setBackground(new java.awt.Color(0, 0, 0));
+        RescateBtn.setBorder(new javax.swing.border.MatteBorder(null));
         RescateBtn.setContentAreaFilled(false);
         RescateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RescateBtnMouseClicked(evt);
             }
         });
-        vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 400, 310));
+        vistaHome.add(RescateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 400, 310));
 
         TipologiaBtn.setBackground(new java.awt.Color(182, 225, 255));
+        TipologiaBtn.setBorder(new javax.swing.border.MatteBorder(null));
         TipologiaBtn.setContentAreaFilled(false);
         TipologiaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -215,34 +237,58 @@ public final class VistaHome extends javax.swing.JPanel {
                 TipologiaBtnActionPerformed(evt);
             }
         });
-        vistaHome.add(TipologiaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 400, 310));
+        vistaHome.add(TipologiaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 160, 400, 310));
 
         ProtocolBtn.setBackground(new java.awt.Color(182, 225, 255));
+        ProtocolBtn.setBorder(new javax.swing.border.MatteBorder(null));
         ProtocolBtn.setContentAreaFilled(false);
         ProtocolBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProtocolBtnMouseClicked(evt);
             }
         });
-        vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 410, 320));
+        vistaHome.add(ProtocolBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 400, 320));
 
         ManiobrasBtn.setBackground(new java.awt.Color(182, 225, 255));
+        ManiobrasBtn.setBorder(new javax.swing.border.MatteBorder(null));
         ManiobrasBtn.setContentAreaFilled(false);
         ManiobrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManiobrasBtnMouseClicked(evt);
             }
         });
-        vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 400, 320));
+        vistaHome.add(ManiobrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 400, 320));
 
         SeñalizaciónBtn.setBackground(new java.awt.Color(182, 225, 255));
+        SeñalizaciónBtn.setBorder(new javax.swing.border.MatteBorder(null));
         SeñalizaciónBtn.setContentAreaFilled(false);
         SeñalizaciónBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SeñalizaciónBtnMouseClicked(evt);
             }
         });
-        vistaHome.add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 410, 430, 310));
+        vistaHome.add(SeñalizaciónBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 510, 400, 320));
+
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setHorizontalScrollBar(null);
+        jScrollPane1.setOpaque(false);
+
+        jTextTitulo.setEditable(false);
+        jTextTitulo.setBackground(new java.awt.Color(10, 38, 72));
+        jTextTitulo.setColumns(20);
+        jTextTitulo.setFont(new java.awt.Font("Raleway", 0, 24)); // NOI18N
+        jTextTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jTextTitulo.setRows(5);
+        jTextTitulo.setAutoscrolls(false);
+        jScrollPane1.setViewportView(jTextTitulo);
+
+        vistaHome.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 1170, 40));
+
+        BarraJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Barrita aislada descripción.png"))); // NOI18N
+        BarraJL.setText("jLabel1");
+        vistaHome.add(BarraJL, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 10, 40));
 
         transaparente.setMaximumSize(new java.awt.Dimension(1540, 850));
         transaparente.setMinimumSize(new java.awt.Dimension(1540, 850));
@@ -362,6 +408,7 @@ public final class VistaHome extends javax.swing.JPanel {
     }
 
     public void mostrarHome(int botonEscudo) throws JSONException, URISyntaxException {
+        botonSeleccionado = botonEscudo;
         vistaHome.setVisible(true);
 
 
@@ -372,12 +419,15 @@ public final class VistaHome extends javax.swing.JPanel {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BarraJL;
     private javax.swing.JButton ManiobrasBtn;
     private javax.swing.JButton ProtocolBtn;
     private javax.swing.JButton RescateBtn;
     private javax.swing.JButton RescateBtn1;
     private javax.swing.JButton SeñalizaciónBtn;
     private javax.swing.JButton TipologiaBtn;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextTitulo;
     private javax.swing.JPanel transaparente;
     private javax.swing.JPanel vistaHome;
     // End of variables declaration//GEN-END:variables

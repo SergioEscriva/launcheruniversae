@@ -36,17 +36,20 @@ public class LectorTextoSimulador {
             for (int y = 1; y <= 6; y++) {
                 simuladorNumero = String.format("Simulador%s", y);
                 // Acceder a las Keys
-                JSONObject numeroSimulador = datos.getJSONObject(simuladorNumero);
-                String Titulo = numeroSimulador.getString("Titulo");
-                String Descripcion = numeroSimulador.getString("Descripcion");
-                String Enlace = numeroSimulador.getString("Enlace");
+                JSONObject datosSimulador = datos.getJSONObject(simuladorNumero);
+                String NombreSimulador = datosSimulador.getString("NombreSimulador");
+                String Titulo = datosSimulador.getString("Titulo");
+                String Descripcion = datosSimulador.getString("Descripcion");
+                String Enlace = datosSimulador.getString("Enlace");
                 // Acceso a las rutas de las imágenes
                 // Agregar a la lista
-                Simulador game = new Simulador(Titulo, Descripcion, Enlace);
+                Simulador game = new Simulador(NombreSimulador, Titulo, Descripcion, Enlace);
                 arreglo.add(game);
             }
 
             arreglo = arreglo;
+            
+            
         }
         return arreglo;
 

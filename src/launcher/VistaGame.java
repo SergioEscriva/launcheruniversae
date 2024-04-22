@@ -9,6 +9,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
 import model.Simulador;
 import org.json.JSONException;
@@ -28,8 +29,8 @@ public final class VistaGame extends javax.swing.JPanel {
     private LectorTextoSimulador simuladorJson;
     private int botonHome;
     private Utility utilidades;
-    //private VistaHome vistaHome;
 
+    //private VistaHome vistaHome;
     // int x = 0;
     /**
      * Creates new form VistaGameJP2
@@ -37,6 +38,7 @@ public final class VistaGame extends javax.swing.JPanel {
     public VistaGame() throws JSONException, URISyntaxException {
         Utility utilidades = new Utility();
         this.utilidades = utilidades;
+
         //VistaHome vistaHome = new VistaHome();
         //this.vistaHome = vistaHome;
         LectorTextoSimulador simuladorJson = new LectorTextoSimulador();
@@ -118,7 +120,7 @@ public final class VistaGame extends javax.swing.JPanel {
         bolita5 = new javax.swing.JLabel();
         ComenzarBtn = new javax.swing.JLabel();
         descripciónPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        atrasBttn = new javax.swing.JLabel();
         jScrollTexto = new javax.swing.JScrollPane();
         jTextTexto = new javax.swing.JTextArea();
         barraJL = new javax.swing.JLabel();
@@ -219,13 +221,13 @@ public final class VistaGame extends javax.swing.JPanel {
         descripciónPanel.setBackground(new java.awt.Color(10, 38, 72));
         descripciónPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Atras.png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        atrasBttn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfazGame/Atras.png"))); // NOI18N
+        atrasBttn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                atrasBttnMouseClicked(evt);
             }
         });
-        descripciónPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 60));
+        descripciónPanel.add(atrasBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 60));
 
         jScrollTexto.setBorder(null);
 
@@ -295,7 +297,12 @@ public final class VistaGame extends javax.swing.JPanel {
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
+
+        //Método poner sonidos a los botones
+        Clip sound = utilidades.getSound("pasarPag.wav");
+
         colocarBolitaLlena();
+
     }//GEN-LAST:event_flechaDerechaMouseClicked
 
     // Carrusel izquierda
@@ -312,11 +319,17 @@ public final class VistaGame extends javax.swing.JPanel {
         imagenPrincipal.setText(String.valueOf(x));
         ImageIcon image = new ImageIcon(imagenPrincipalImg);
         imagenPrincipal.setIcon(image);
+
+        //Método poner sonidos a los botones
+        Clip sound = utilidades.getSound("pasarPag.wav");
         colocarBolitaLlena();
     }//GEN-LAST:event_flechaIzquierdaMouseClicked
 
     private void ComenzarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComenzarBtnMouseClicked
         ArrayList<Simulador> games = new ArrayList<>();
+
+        //Método poner sonidos a los botones
+        Clip sound = utilidades.getSound("seleccionar.wav");
         //Solo deja clicar el boton una vez
         ComenzarBtn.setEnabled(false);
         try {
@@ -335,8 +348,11 @@ public final class VistaGame extends javax.swing.JPanel {
 
     }//GEN-LAST:event_ComenzarBtnMouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void atrasBttnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasBttnMouseClicked
         VistaHome vistaHome = null;
+
+        //Método poner sonidos a los botones
+        Clip sound = utilidades.getSound("seleccionar.wav");
         try {
             vistaHome = new VistaHome();
         } catch (JSONException ex) {
@@ -345,7 +361,7 @@ public final class VistaGame extends javax.swing.JPanel {
             Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
         }
         utilidades.showPanel(this, vistaHome);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_atrasBttnMouseClicked
 
     //Método para bolitas llenas
     public void colocarBolitaLlena() {
@@ -404,6 +420,7 @@ public final class VistaGame extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BolitasPanel;
     private javax.swing.JLabel ComenzarBtn;
+    private javax.swing.JLabel atrasBttn;
     private javax.swing.JLabel barraJL;
     private javax.swing.JLabel bolita1;
     private javax.swing.JLabel bolita2;
@@ -416,7 +433,6 @@ public final class VistaGame extends javax.swing.JPanel {
     private javax.swing.JLabel flechaIzquierda;
     private javax.swing.JLabel imagenFondo;
     private javax.swing.JLabel imagenPrincipal;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollTexto;
     private javax.swing.JScrollPane jScrollTitulo;
     private javax.swing.JTextArea jTTitulo;

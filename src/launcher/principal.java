@@ -58,6 +58,7 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
         FondoP = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         launcherBtn0 = new javax.swing.JButton();
@@ -75,6 +76,12 @@ public class principal extends javax.swing.JFrame {
         launcherBtn12 = new javax.swing.JButton();
         launcherBtn13 = new javax.swing.JButton();
         cuerpoPrincipal = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextTitulo = new javax.swing.JTextArea();
+        tituloGradoJL = new javax.swing.JLabel();
+        barritaJL = new javax.swing.JLabel();
         FacebookBtn1 = new javax.swing.JButton();
         IstagramBtn = new javax.swing.JButton();
         YoutubeBtn = new javax.swing.JButton();
@@ -83,13 +90,18 @@ public class principal extends javax.swing.JFrame {
         TiktokBtn = new javax.swing.JButton();
         Xbtn = new javax.swing.JButton();
         GoogleBtn = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextTitulo = new javax.swing.JTextArea();
-        tituloGradoJL = new javax.swing.JLabel();
-        barritaJL = new javax.swing.JLabel();
         FondoJL = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -103,6 +115,7 @@ public class principal extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
 
         launcherBtn0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
+        launcherBtn0.setToolTipText("HOME");
         launcherBtn0.setContentAreaFilled(false);
         launcherBtn0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         launcherBtn0.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton0.png"))); // NOI18N
@@ -119,6 +132,7 @@ public class principal extends javax.swing.JFrame {
         });
 
         launcherBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
+        launcherBtn1.setToolTipText("");
         launcherBtn1.setContentAreaFilled(false);
         launcherBtn1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton1.png"))); // NOI18N
         launcherBtn1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn1.png"))); // NOI18N
@@ -182,6 +196,7 @@ public class principal extends javax.swing.JFrame {
         });
 
         launcherBtn7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
+        launcherBtn7.setToolTipText("");
         launcherBtn7.setContentAreaFilled(false);
         launcherBtn7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton7.png"))); // NOI18N
         launcherBtn7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn7.png"))); // NOI18N
@@ -202,6 +217,7 @@ public class principal extends javax.swing.JFrame {
         });
 
         launcherBtn9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
+        launcherBtn9.setToolTipText("");
         launcherBtn9.setContentAreaFilled(false);
         launcherBtn9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton9.png"))); // NOI18N
         launcherBtn9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn9.png"))); // NOI18N
@@ -235,6 +251,11 @@ public class principal extends javax.swing.JFrame {
         launcherBtn12.setContentAreaFilled(false);
         launcherBtn12.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton12.png"))); // NOI18N
         launcherBtn12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherBtn12.png"))); // NOI18N
+        launcherBtn12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                launcherBtn12MouseEntered(evt);
+            }
+        });
 
         launcherBtn13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesIconos/LauncherButton13.png"))); // NOI18N
         launcherBtn13.setContentAreaFilled(false);
@@ -282,26 +303,24 @@ public class principal extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(launcherBtn10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(launcherBtn13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(launcherBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(launcherBtn0, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                    .addComponent(launcherBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(launcherBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(launcherBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(launcherBtn0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addComponent(launcherBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addComponent(launcherBtn11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(launcherBtn12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(launcherBtn13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         FondoP.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 1560, 170));
@@ -440,11 +459,6 @@ public class principal extends javax.swing.JFrame {
                 LinkedinBtnMouseClicked(evt);
             }
         });
-        LinkedinBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LinkedinBtnActionPerformed(evt);
-            }
-        });
         FondoP.add(LinkedinBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 160, 40));
 
         TiktokBtn.setBorder(null);
@@ -453,11 +467,6 @@ public class principal extends javax.swing.JFrame {
         TiktokBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TiktokBtnMouseClicked(evt);
-            }
-        });
-        TiktokBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TiktokBtnActionPerformed(evt);
             }
         });
         FondoP.add(TiktokBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 160, 40));
@@ -470,11 +479,6 @@ public class principal extends javax.swing.JFrame {
                 XbtnMouseClicked(evt);
             }
         });
-        Xbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                XbtnActionPerformed(evt);
-            }
-        });
         FondoP.add(Xbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 170, 30));
 
         GoogleBtn.setBorder(null);
@@ -483,11 +487,6 @@ public class principal extends javax.swing.JFrame {
         GoogleBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 GoogleBtnMouseClicked(evt);
-            }
-        });
-        GoogleBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GoogleBtnActionPerformed(evt);
             }
         });
         FondoP.add(GoogleBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 220, 30));
@@ -545,6 +544,11 @@ public class principal extends javax.swing.JFrame {
     }
 
     private void launcherBtn0MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn0MouseEntered
+        //texto emergente
+        String texto = "Grado 1";
+
+        launcherBtn0.setToolTipText(texto);
+
         //Sonido al pasar el ratón
         String titulo = "Grado";
         // Quita el botón grande una vez seleccionado
@@ -566,78 +570,107 @@ public class principal extends javax.swing.JFrame {
     private void launcherBtn1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn1MousePressed
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
     }//GEN-LAST:event_launcherBtn1MousePressed
 
     private void launcherBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn1MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn1.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn1MouseEntered
 
     private void launcherBtn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn2MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn2.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn2MouseEntered
 
     private void launcherBtn3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn3MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn3.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn3MouseEntered
 
     private void launcherBtn4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn4MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn4.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn4MouseEntered
 
     private void launcherBtn5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn5MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn5.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn5MouseEntered
 
     private void launcherBtn6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn6MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn6.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn6MouseEntered
 
     private void launcherBtn7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn7MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn7.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn7MouseEntered
 
     private void launcherBtn8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn8MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn8.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn8MouseEntered
 
     private void launcherBtn9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn9MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn9.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn9MouseEntered
 
     private void launcherBtn10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn10MouseEntered
         //Sonido al pasar el ratón
         Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "Este boton hace....";
+
+        launcherBtn10.setToolTipText(texto);
     }//GEN-LAST:event_launcherBtn10MouseEntered
-
-    private void launcherBtn11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn11MouseEntered
-        //Sonido al pasar el ratón
-        Clip sound = utilidades.getSound("pasar.wav");
-    }//GEN-LAST:event_launcherBtn11MouseEntered
-
-    private void LinkedinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LinkedinBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LinkedinBtnActionPerformed
-
-    private void TiktokBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiktokBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TiktokBtnActionPerformed
-
-    private void XbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XbtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_XbtnActionPerformed
-
-    private void GoogleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoogleBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_GoogleBtnActionPerformed
 
     private void FacebookBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FacebookBtn1MouseClicked
         if (Desktop.isDesktopSupported()) {
@@ -778,6 +811,24 @@ public class principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_GoogleBtnMouseClicked
 
+    private void launcherBtn12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn12MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "HOME";
+        launcherBtn0.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn12MouseEntered
+
+    private void launcherBtn11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_launcherBtn11MouseEntered
+        //Sonido al pasar el ratón
+        Clip sound = utilidades.getSound("pasar.wav");
+
+        //texto emergente
+        String texto = "HOME";
+        launcherBtn0.setToolTipText(texto);
+    }//GEN-LAST:event_launcherBtn11MouseEntered
+
     public void launcherGame(int game) {
 
         utilidades.showPanel(cuerpoPrincipal, vistaGame);
@@ -832,7 +883,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton FacebookBtn1;
     private javax.swing.JLabel FondoJL;
     public static javax.swing.JPanel FondoP;
-    private javax.swing.JLabel barritaJL;
     private javax.swing.JButton GoogleBtn;
     private javax.swing.JButton IstagramBtn;
     private javax.swing.JButton LinkedinBtn;
@@ -840,7 +890,9 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton TwichBtn;
     private javax.swing.JButton Xbtn;
     private javax.swing.JButton YoutubeBtn;
+    private javax.swing.JLabel barritaJL;
     private javax.swing.JPanel cuerpoPrincipal;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

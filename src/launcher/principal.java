@@ -9,6 +9,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.JSONException;
 import utilidades.Utility;
+import java.awt.Desktop;
+import java.net.URI;
+
 
 /**
  *
@@ -59,6 +62,14 @@ public  class principal extends javax.swing.JFrame {
         launcherBtn12 = new javax.swing.JButton();
         launcherBtn13 = new javax.swing.JButton();
         cuerpoPrincipal = new javax.swing.JPanel();
+        FacebookBtn1 = new javax.swing.JButton();
+        IstagramBtn = new javax.swing.JButton();
+        YoutubeBtn = new javax.swing.JButton();
+        TwichBtn = new javax.swing.JButton();
+        LinkedinBtn = new javax.swing.JButton();
+        TiktokBtn = new javax.swing.JButton();
+        Xbtn = new javax.swing.JButton();
+        GoogleBtn = new javax.swing.JButton();
         FondoJL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -180,7 +191,7 @@ public  class principal extends javax.swing.JFrame {
                 .addComponent(launcherBtn12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(launcherBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,7 +217,7 @@ public  class principal extends javax.swing.JFrame {
             .addComponent(launcherBtn12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        FondoP.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 1550, 170));
+        FondoP.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 1560, 170));
 
         cuerpoPrincipal.setBackground(new java.awt.Color(10, 38, 72));
         cuerpoPrincipal.setMaximumSize(new java.awt.Dimension(1540, 850));
@@ -217,19 +228,122 @@ public  class principal extends javax.swing.JFrame {
         cuerpoPrincipal.setLayout(cuerpoPrincipalLayout);
         cuerpoPrincipalLayout.setHorizontalGroup(
             cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1540, Short.MAX_VALUE)
+            .addGap(0, 1550, Short.MAX_VALUE)
         );
         cuerpoPrincipalLayout.setVerticalGroup(
             cuerpoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 850, Short.MAX_VALUE)
+            .addGap(0, 860, Short.MAX_VALUE)
         );
 
-        FondoP.add(cuerpoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
+        FondoP.add(cuerpoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 1550, 860));
 
+        FacebookBtn1.setBorder(null);
+        FacebookBtn1.setContentAreaFilled(false);
+        FacebookBtn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        FacebookBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FacebookBtn1MouseClicked(evt);
+            }
+        });
+        FondoP.add(FacebookBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 170, 40));
+
+        IstagramBtn.setToolTipText("");
+        IstagramBtn.setBorder(null);
+        IstagramBtn.setContentAreaFilled(false);
+        IstagramBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        IstagramBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IstagramBtnMouseClicked(evt);
+            }
+        });
+        FondoP.add(IstagramBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 180, 30));
+
+        YoutubeBtn.setToolTipText("");
+        YoutubeBtn.setBorder(null);
+        YoutubeBtn.setContentAreaFilled(false);
+        YoutubeBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        YoutubeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                YoutubeBtnMouseClicked(evt);
+            }
+        });
+        FondoP.add(YoutubeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 210, 30));
+
+        TwichBtn.setBorder(null);
+        TwichBtn.setContentAreaFilled(false);
+        TwichBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TwichBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TwichBtnMouseClicked(evt);
+            }
+        });
+        FondoP.add(TwichBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 210, 40));
+
+        LinkedinBtn.setBorder(null);
+        LinkedinBtn.setContentAreaFilled(false);
+        LinkedinBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LinkedinBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LinkedinBtnMouseClicked(evt);
+            }
+        });
+        LinkedinBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LinkedinBtnActionPerformed(evt);
+            }
+        });
+        FondoP.add(LinkedinBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 160, 40));
+
+        TiktokBtn.setBorder(null);
+        TiktokBtn.setContentAreaFilled(false);
+        TiktokBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TiktokBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TiktokBtnMouseClicked(evt);
+            }
+        });
+        TiktokBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TiktokBtnActionPerformed(evt);
+            }
+        });
+        FondoP.add(TiktokBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 160, 40));
+
+        Xbtn.setBorder(null);
+        Xbtn.setContentAreaFilled(false);
+        Xbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Xbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                XbtnMouseClicked(evt);
+            }
+        });
+        Xbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                XbtnActionPerformed(evt);
+            }
+        });
+        FondoP.add(Xbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 170, 30));
+
+        GoogleBtn.setBorder(null);
+        GoogleBtn.setContentAreaFilled(false);
+        GoogleBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        GoogleBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GoogleBtnMouseClicked(evt);
+            }
+        });
+        GoogleBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoogleBtnActionPerformed(evt);
+            }
+        });
+        FondoP.add(GoogleBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 220, 30));
+
+        FondoJL.setBackground(new java.awt.Color(10, 38, 72));
         FondoJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoBase.png"))); // NOI18N
         FondoJL.setText("jLabel1");
         FondoJL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        FondoP.add(FondoJL, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1920, 1080));
+        FondoP.add(FondoJL, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1100));
         FondoJL.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -237,9 +351,8 @@ public  class principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(FondoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(FondoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,7 +378,163 @@ public  class principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_launcherBtn0ActionPerformed
 
-    public void launcherGame(int game) {
+    private void LinkedinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LinkedinBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LinkedinBtnActionPerformed
+
+    private void TiktokBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiktokBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TiktokBtnActionPerformed
+
+    private void XbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_XbtnActionPerformed
+
+    private void GoogleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoogleBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoogleBtnActionPerformed
+
+    private void FacebookBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FacebookBtn1MouseClicked
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    URI uri = new URI("https://www.facebook.com/UNIVERSAE/");
+                    desktop.browse(uri);
+                    
+                } catch (Exception ignored) {
+            }
+        }
+    }//GEN-LAST:event_FacebookBtn1MouseClicked
+    }
+    private void IstagramBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IstagramBtnMouseClicked
+        // Comprobar si Desktop es soportado por la plataforma
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            // Comprobar si la acción BROWSE es soportada
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    // Definir la URI de Facebook
+                    URI uri = new URI("https://www.instagram.com/_universae/");
+                    // Abrir la URI en el navegador predeterminado
+                    desktop.browse(uri);
+                    // En este caso, estamos ignorando las excepciones.
+                } catch (Exception ignored) {
+            }
+        }
+    }
+    }//GEN-LAST:event_IstagramBtnMouseClicked
+
+    private void YoutubeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_YoutubeBtnMouseClicked
+        // Comprobar si Desktop es soportado por la plataforma
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            // Comprobar si la acción BROWSE es soportada
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    // Definir la URI de Facebook
+                    URI uri = new URI("https://www.youtube.com/c/UNIVERSAE_FP");
+                    // Abrir la URI en el navegador predeterminado
+                    desktop.browse(uri);
+                  // En este caso, estamos ignorando las excepciones.
+                } catch (Exception ignored) {
+            }
+        }
+    }
+    }//GEN-LAST:event_YoutubeBtnMouseClicked
+
+    private void TwichBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TwichBtnMouseClicked
+        // Comprobar si Desktop es soportado por la plataforma
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            // Comprobar si la acción BROWSE es soportada
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    // Definir la URI de Facebook
+                    URI uri = new URI("https://www.twitch.tv/universae_fp");
+                    // Abrir la URI en el navegador predeterminado
+                    desktop.browse(uri);
+                // En este caso, estamos ignorando las excepciones.    
+                } catch (Exception ignored) {
+            }
+        }
+    }
+    }//GEN-LAST:event_TwichBtnMouseClicked
+
+    private void LinkedinBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LinkedinBtnMouseClicked
+         // Comprobar si Desktop es soportado por la plataforma
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            // Comprobar si la acción BROWSE es soportada
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    // Definir la URI de Facebook
+                    URI uri = new URI("https://es.linkedin.com/school/universae/");
+                    // Abrir la URI en el navegador predeterminado
+                    desktop.browse(uri);
+                // En este caso, estamos ignorando las excepciones.    
+                } catch (Exception ignored) {
+            }
+        }
+    }
+    }//GEN-LAST:event_LinkedinBtnMouseClicked
+
+    private void TiktokBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TiktokBtnMouseClicked
+           // Comprobar si Desktop es soportado por la plataforma
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            // Comprobar si la acción BROWSE es soportada
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    // Definir la URI de Facebook
+                    URI uri = new URI("https://www.tiktok.com/@_universae");
+                    // Abrir la URI en el navegador predeterminado
+                    desktop.browse(uri);
+                // En este caso, estamos ignorando las excepciones.    
+                } catch (Exception ignored) {
+            }
+        }
+    }
+    }//GEN-LAST:event_TiktokBtnMouseClicked
+
+    private void XbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_XbtnMouseClicked
+            // Comprobar si Desktop es soportado por la plataforma
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            // Comprobar si la acción BROWSE es soportada
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    // Definir la URI de Facebook
+                    URI uri = new URI("https://twitter.com/_Universae/");
+                    // Abrir la URI en el navegador predeterminado
+                    desktop.browse(uri);
+                // En este caso, estamos ignorando las excepciones.    
+                } catch (Exception ignored) {
+            }
+        }
+    }
+    }//GEN-LAST:event_XbtnMouseClicked
+
+    private void GoogleBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GoogleBtnMouseClicked
+          // Comprobar si Desktop es soportado por la plataforma
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            // Comprobar si la acción BROWSE es soportada
+            if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    // Definir la URI de Facebook
+                    URI uri = new URI("https://universae.com/");
+                    // Abrir la URI en el navegador predeterminado
+                    desktop.browse(uri);
+                // En este caso, estamos ignorando las excepciones.    
+                } catch (Exception ignored) {
+            }
+        }
+    }
+    }//GEN-LAST:event_GoogleBtnMouseClicked
+
+        
+        public void launcherGame(int game) {
 
         utility.showPanel(cuerpoPrincipal, vistaGame);
 
@@ -316,8 +585,16 @@ public  class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton FacebookBtn1;
     private javax.swing.JLabel FondoJL;
     public static javax.swing.JPanel FondoP;
+    private javax.swing.JButton GoogleBtn;
+    private javax.swing.JButton IstagramBtn;
+    private javax.swing.JButton LinkedinBtn;
+    private javax.swing.JButton TiktokBtn;
+    private javax.swing.JButton TwichBtn;
+    private javax.swing.JButton Xbtn;
+    private javax.swing.JButton YoutubeBtn;
     private javax.swing.JPanel cuerpoPrincipal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton launcherBtn0;

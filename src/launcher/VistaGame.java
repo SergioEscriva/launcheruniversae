@@ -368,10 +368,15 @@ public final class VistaGame extends javax.swing.JPanel {
         } catch (IOException ex) {
             Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        atras();
 
     }//GEN-LAST:event_ComenzarBtnMouseClicked
 
     private void atrasBttnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasBttnMouseClicked
+        atras();
+    }//GEN-LAST:event_atrasBttnMouseClicked
+
+    public void atras() {
         VistaHome vistaHome = null;
 
         //Método poner sonidos a los botones
@@ -384,7 +389,7 @@ public final class VistaGame extends javax.swing.JPanel {
             Logger.getLogger(VistaGame.class.getName()).log(Level.SEVERE, null, ex);
         }
         utilidades.showPanel(this, vistaHome);
-    }//GEN-LAST:event_atrasBttnMouseClicked
+    }
 
     //Método para bolitas llenas
     public void colocarBolitaLlena() {

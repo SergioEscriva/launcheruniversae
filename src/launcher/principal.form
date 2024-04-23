@@ -527,8 +527,8 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="16 Grados diferentes a elegir"/>
-                    <Property name="toolTipText" type="java.lang.String" value="16 Grados diferentes a elegir"/>
+                    <Property name="text" type="java.lang.String" value="14 Grados diferentes a elegir"/>
+                    <Property name="toolTipText" type="java.lang.String" value="14 Grados diferentes a elegir"/>
                     <Property name="autoscrolls" type="boolean" value="false"/>
                   </Properties>
                 </Component>

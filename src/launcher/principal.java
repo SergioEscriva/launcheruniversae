@@ -43,7 +43,7 @@ public class principal extends javax.swing.JFrame {
 
     public void write() {
         Boolean writeNow = false;
-        utilidades.slowPrint(jTextArea1, "Cada escudo es un grado\ncada grado tiene 3 juegos.\nParticipa en este reto de ingenio y sabiduría...\n¿Te atreves?\n\nPulsa en la barra superior el ciclo.");
+        utilidades.slowPrint(jTextArea1, "Cada escudo es un grado\ncada grado tiene 6 juegos.\nParticipa en este reto de ingenio y sabiduría...\n¿Te atreves?\n\nPulsa en la barra superior el ciclo.");
 
     }
 
@@ -332,8 +332,8 @@ public class principal extends javax.swing.JFrame {
         jTextTitulo.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         jTextTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jTextTitulo.setRows(5);
-        jTextTitulo.setText("16 Grados diferentes a elegir");
-        jTextTitulo.setToolTipText("16 Grados diferentes a elegir");
+        jTextTitulo.setText("14 Grados diferentes a elegir");
+        jTextTitulo.setToolTipText("14 Grados diferentes a elegir");
         jTextTitulo.setAutoscrolls(false);
         jScrollPane2.setViewportView(jTextTitulo);
 

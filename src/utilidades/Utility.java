@@ -171,7 +171,6 @@ public class Utility {
         String estadistica1 = String.valueOf(data.charAt(gradoGuardado));
         estadistica1 += String.valueOf(data.charAt(gradoGuardado + 1));
         String estadisticaFinal = String.valueOf(Integer.valueOf(estadistica1));
-        System.out.println("ESTA " + estadisticaFinal);
         return estadisticaFinal;
     }
 
@@ -187,8 +186,6 @@ public class Utility {
         int x = gradoGuardado;// indice del caracter a reemplazar(empieza a contar en cero)
         String nuevo = new StringBuilder(original).replace(x, x + 1, estadisticaFinal).toString();// nueva cadena reemplazando el caracter x
         nuevo = new StringBuilder(nuevo).delete(x + 2, x + 3).toString();// borra el segundo caracter, que ya hemos introducido antes.
-        System.out.println("Original: " + original);
-        System.out.println("Nuevoooo: " + nuevo);
 
         try {
             FileWriter myWriter = new FileWriter("src/utilidades/estadistica.txt");
